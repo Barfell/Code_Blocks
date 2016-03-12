@@ -1,0 +1,1684 @@
+Microchip MPLAB XC8 Compiler V1.31 ()
+
+Linker command line:
+
+--edf=D:\Microchip\xc8\v1.31\dat\en_msgs.txt -cs \
+  -h+dist/default/production\PIC18F2550_C.X.production.sym \
+  --cmf=dist/default/production\PIC18F2550_C.X.production.cmf -z -Q18F2550 \
+  -oC:\Users\UDAYAN~1\AppData\Local\Temp\s4rc.6 \
+  -Mdist/default/production/PIC18F2550_C.X.production.map -E1 -ver=XC8 \
+  -ASTACK=01A7h-07ffh -pstack=STACK -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
+  -ASMALLCONST=0800h-08FFhx120 -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh \
+  -AABS1=00h-07FFh -ABIGRAM=01h-07FFh -ARAM=060h-0FFh,0100h-01FFhx7 \
+  -ABANK0=060h-0FFh -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh \
+  -ABANK3=0300h-03FFh -ABANK4=0400h-04FFh -ABANK5=0500h-05FFh \
+  -ABANK6=0600h-06FFh -ABANK7=0700h-07FFh -ASFR=0F60h-0FFFh \
+  -preset_vec=00h,intcode,intcodelo,powerup,init,end_init -pramtop=0800h \
+  -psmallconst=SMALLCONST -pmediumconst=MEDIUMCONST -pconst=CONST \
+  -AFARRAM=00h-00h -ACONFIG=0300000h-030000Dh -pconfig=CONFIG \
+  -AIDLOC=0200000h-0200007h -pidloc=IDLOC -AEEDATA=0F00000h-0F000FFh \
+  -peeprom_data=EEDATA \
+  -prdata=COMRAM,nvrram=COMRAM,nvbit=COMRAM,rbss=COMRAM,rbit=COMRAM \
+  -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
+  -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
+  -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE \
+  C:\Users\UDAYAN~1\AppData\Local\Temp\s4rc.obj \
+  dist/default/production\PIC18F2550_C.X.production.obj 
+
+Object code version is 3.11
+
+Machine type is 18F2550
+
+Call graph: (short form)
+
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+C:\Users\UDAYAN~1\AppData\Local\Temp\s4rc.obj
+                end_init                              0        0        4        0       0
+                idloc                            200000   200000        8   200000       0
+                config                           300000   300000        E   300000       0
+dist/default/production\PIC18F2550_C.X.production.obj
+                text24                             6E9E     6E9E        6     374F       0
+                text23                             6EA4     6EA4        6     3752       0
+                text22                             6EE2     6EE2       12     3771       0
+                text21                             6F38     6F38       20     379C       0
+                text20                             6F58     6F58       2E     37AC       0
+                text19                             6EAA     6EAA        A     3755       0
+                text18                             6ED2     6ED2       10     3769       0
+                text17                             7B48     7B48      4B8     3DA4       0
+                text16                             6FEC     6FEC       3E     37F6       0
+                text15                             786E     786E      2DA     3C37       0
+                text14                             6FB8     6FB8       34     37DC       0
+                text13                             6F86     6F86       32     37C3       0
+                text12                             70D6     70D6       5A     386B       0
+                text11                             6EB4     6EB4        E     375A       0
+                text10                             6F0A     6F0A       16     3785       0
+                text9                              6F20     6F20       18     3790       0
+                text8                              707E     707E       58     383F       0
+                text7                              75C6     75C6      132     3AE3       0
+                text6                              718A     718A       6A     38C5       0
+                text5                              702A     702A       54     3815       0
+                text4                              74BA     74BA      10C     3A5D       0
+                text3                              73B6     73B6      104     39DB       0
+                text2                              76F8     76F8      176     3B7C       0
+                text1                              7276     7276       98     393B       0
+                text0                              7130     7130       5A     3898       0
+                cstackCOMRAM                          1        1       3A        1       1
+                cstackBANK0                          60       60       67       60       1
+                dataBANK1                           100      100       A7      100       1
+                dataBANK0                            E2       E2       15       60       1
+                bssBANK0                             C7       C7       1B       60       1
+                dataCOMRAM                           3B       3B        F        1       1
+                bssCOMRAM                            4A       4A        E        1       1
+                cinit                              71F4     71F4       82     38FA       0
+                idataBANK1                         730F     730F       A7     730F       0
+                idataBANK0                         6EF5     6EF5       15     6EF5       0
+                idataCOMRAM                        6EC3     6EC3        F     6EC3       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   STACK          
+
+        CLASS   CODE           
+                end_init                              0        0        4         0
+                text24                             6E9E     6E9E        6         0
+                text23                             6EA4     6EA4        6         0
+                text22                             6EE2     6EE2       12         0
+                text21                             6F38     6F38       20         0
+                text20                             6F58     6F58       2E         0
+                text19                             6EAA     6EAA        A         0
+                text18                             6ED2     6ED2       10         0
+                text17                             7B48     7B48      4B8         0
+                text16                             6FEC     6FEC       3E         0
+                text15                             786E     786E      2DA         0
+                text14                             6FB8     6FB8       34         0
+                text13                             6F86     6F86       32         0
+                text12                             70D6     70D6       5A         0
+                text11                             6EB4     6EB4        E         0
+                text10                             6F0A     6F0A       16         0
+                text9                              6F20     6F20       18         0
+                text8                              707E     707E       58         0
+                text7                              75C6     75C6      132         0
+                text6                              718A     718A       6A         0
+                text5                              702A     702A       54         0
+                text4                              74BA     74BA      10C         0
+                text3                              73B6     73B6      104         0
+                text2                              76F8     76F8      176         0
+                text1                              7276     7276       98         0
+                text0                              7130     7130       5A         0
+                cinit                              71F4     71F4       82         0
+                idataBANK1                         730F     730F       A7         0
+                idataBANK0                         6EF5     6EF5       15         0
+                idataCOMRAM                        6EC3     6EC3        F         0
+
+        CLASS   CONST          
+
+        CLASS   SMALLCONST     
+
+        CLASS   MEDIUMCONST    
+
+        CLASS   COMRAM         
+                cstackCOMRAM                          1        1       3A         1
+                dataCOMRAM                           3B       3B        F         1
+                bssCOMRAM                            4A       4A        E         1
+
+        CLASS   ABS1           
+
+        CLASS   BIGRAM         
+
+        CLASS   RAM            
+
+        CLASS   BANK0          
+                cstackBANK0                          60       60       67         1
+                dataBANK0                            E2       E2       15         1
+                bssBANK0                             C7       C7       1B         1
+
+        CLASS   BANK1          
+                dataBANK1                           100      100       A7         1
+
+        CLASS   BANK2          
+
+        CLASS   BANK3          
+
+        CLASS   BANK4          
+
+        CLASS   BANK5          
+
+        CLASS   BANK6          
+
+        CLASS   BANK7          
+
+        CLASS   SFR            
+
+        CLASS   FARRAM         
+
+        CLASS   CONFIG         
+                config                           300000   300000        E         0
+
+        CLASS   IDLOC          
+                idloc                            200000   200000        8         0
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
+
+                reset_vec                      000000  000004  000004         0       0  CODE    
+                cstackCOMRAM                   000001  000057  000058         1       1  COMRAM  
+                cstackBANK0                    000060  000097  0000F7        60       1  BANK0   
+                dataBANK1                      000100  0000A7  0001A7       100       1  BANK1   
+                text24                         006E9E  000006  006EA4      374F       0  CODE    
+                text23                         006EA4  000006  006EAA      3752       0  CODE    
+                text19                         006EAA  00000A  006EB4      3755       0  CODE    
+                text11                         006EB4  00000E  006EC2      375A       0  CODE    
+                idataCOMRAM                    006EC3  00000F  006ED2      6EC3       0  CODE    
+                text18                         006ED2  000010  006EE2      3769       0  CODE    
+                text22                         006EE2  000012  006EF4      3771       0  CODE    
+                idataBANK0                     006EF5  000015  006F0A      6EF5       0  CODE    
+                text10                         006F0A  000016  006F20      3785       0  CODE    
+                text9                          006F20  000018  006F38      3790       0  CODE    
+                text21                         006F38  000020  006F58      379C       0  CODE    
+                text20                         006F58  00002E  006F86      37AC       0  CODE    
+                text13                         006F86  000032  006FB8      37C3       0  CODE    
+                text14                         006FB8  000034  006FEC      37DC       0  CODE    
+                text16                         006FEC  00003E  00702A      37F6       0  CODE    
+                text5                          00702A  000054  00707E      3815       0  CODE    
+                text8                          00707E  000058  0070D6      383F       0  CODE    
+                text12                         0070D6  00005A  007130      386B       0  CODE    
+                text0                          007130  00005A  00718A      3898       0  CODE    
+                text6                          00718A  00006A  0071F4      38C5       0  CODE    
+                cinit                          0071F4  000082  007276      38FA       0  CODE    
+                text1                          007276  000098  00730E      393B       0  CODE    
+                idataBANK1                     00730F  0000A7  0073B6      730F       0  CODE    
+                text3                          0073B6  000104  0074BA      39DB       0  CODE    
+                text4                          0074BA  00010C  0075C6      3A5D       0  CODE    
+                text7                          0075C6  000132  0076F8      3AE3       0  CODE    
+                text2                          0076F8  000176  00786E      3B7C       0  CODE    
+                text15                         00786E  0002DA  007B48      3C37       0  CODE    
+                text17                         007B48  0004B8  008000      3DA4       0  CODE    
+                idloc                          200000  000008  200008    200000       0  IDLOC   
+                config                         300000  00000E  30000E    300000       0  CONFIG  
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            0000F7-0000FF                9
+        BANK1            0001A7-0001FF               59
+        BANK2            000200-0002FF              100
+        BANK3            000300-0003FF              100
+        BANK4            000400-0004FF              100
+        BANK5            000500-0005FF              100
+        BANK6            000600-0006FF              100
+        BANK7            000700-0007FF              100
+        BIGRAM           000058-00005F                8
+                         0000F7-0000FF                9
+                         0001A7-0007FF              659
+        CODE             000004-006E9D             6E9A
+                         006EC2-006EC2                1
+                         006EF4-006EF4                1
+                         00730E-00730E                1
+        COMRAM           000058-00005F                8
+        CONST            000004-006E9D             6E9A
+                         006EC2-006EC2                1
+                         006EF4-006EF4                1
+                         00730E-00730E                1
+        EEDATA           F00000-F000FF              100
+        MEDIUMCONST      000800-006E9D             669E
+                         006EC2-006EC2                1
+                         006EF4-006EF4                1
+                         00730E-00730E                1
+        RAM              0000F7-0000FF                9
+                         0001A7-0007FF              100
+        SFR              000F60-000FFF               A0
+        SMALLCONST       000800-006E9D              100
+                         006EC2-006EC2                1
+                         006EF4-006EF4                1
+                         00730E-00730E                1
+        STACK            0001A7-0007FF              659
+
+                                  Symbol Table
+
+CAN2510BitModify@addr                   cstackCOMRAM 000005
+CAN2510BitModify@mask                   cstackCOMRAM 000003
+CAN2510BitModify@value                  cstackCOMRAM 000004
+CAN2510BitTimeInit@BitTimeConfig        cstackCOMRAM 000005
+CAN2510BitTimeInit@WriteData            bssCOMRAM    00004E
+CAN2510BitTimeInit@databyte             bssCOMRAM    00004F
+CAN2510ByteRead@ReturnValue             cstackCOMRAM 000004
+CAN2510ByteRead@addr                    cstackCOMRAM 000003
+CAN2510ByteWrite@addr                   cstackCOMRAM 000004
+CAN2510ByteWrite@value                  cstackCOMRAM 000003
+CAN2510DataRead@DLCRegister             bssCOMRAM    000050
+CAN2510DataRead@bufferAddr              bssCOMRAM    000051
+CAN2510DataRead@bufferNum               cstackCOMRAM 000012
+CAN2510DataRead@data                    cstackCOMRAM 00000A
+CAN2510DataRead@msgId                   cstackCOMRAM 000006
+CAN2510DataRead@numBytes                cstackCOMRAM 000008
+CAN2510DataRead@readValue               bssCOMRAM    000052
+CAN2510DataRead@result                  cstackCOMRAM 000011
+CAN2510DataRead@tempSIDL                cstackCOMRAM 000013
+CAN2510ErrorState@BufferEFLG            cstackCOMRAM 000005
+CAN2510Init@BitTimeConfig               cstackCOMRAM 00000E
+CAN2510Init@BufferConfig                cstackCOMRAM 00000A
+CAN2510Init@SPI_busMode                 cstackCOMRAM 000014
+CAN2510Init@SPI_smpPhase                cstackCOMRAM 000015
+CAN2510Init@SPI_syncMode                cstackCOMRAM 000013
+CAN2510Init@counter1                    cstackCOMRAM 00001A
+CAN2510Init@counter2                    cstackCOMRAM 00001B
+CAN2510Init@interruptEnables            cstackCOMRAM 000012
+CAN2510Init@setting                     bssCOMRAM    000053
+CAN2510ReadMode@mode                    cstackCOMRAM 000005
+CAN2510SetMode@mode                     cstackCOMRAM 000007
+CAN2510SetMsgFilterStd@bufferNum        cstackCOMRAM 000011
+CAN2510SetMsgFilterStd@counter1         cstackCOMRAM 000012
+CAN2510SetMsgFilterStd@counter2         cstackCOMRAM 000013
+CAN2510SetMsgFilterStd@currFilter       bssCOMRAM    000054
+CAN2510SetMsgFilterStd@filters          cstackCOMRAM 00000E
+CAN2510SetMsgFilterStd@mask             cstackCOMRAM 00000C
+CAN2510SetMsgFilterStd@modebits         bssCOMRAM    000055
+CAN2510SetSingleFilterStd@addr          cstackCOMRAM 00000A
+CAN2510SetSingleFilterStd@filter        cstackCOMRAM 000005
+CAN2510SetSingleFilterStd@filterNum     cstackCOMRAM 00000B
+CAN2510SetSingleFilterStd@writeValue    cstackCOMRAM 000009
+CAN2510SetSingleMaskStd@mask            cstackCOMRAM 000005
+CAN2510SetSingleMaskStd@maskNum         cstackCOMRAM 00000A
+CAN2510SetSingleMaskStd@writeValue      cstackCOMRAM 000009
+OpenSPI@bus_mode                        cstackCOMRAM 000001
+OpenSPI@smp_phase                       cstackCOMRAM 000002
+OpenSPI@sync_mode                       cstackCOMRAM 000003
+ReadSPI@TempVar                         cstackCOMRAM 000001
+WriteSPI@TempVar                        cstackCOMRAM 000001
+WriteSPI@data_out                       cstackCOMRAM 000002
+_BRG16                                  (abs)        007DC3
+_BRGH                                   (abs)        007D62
+_CAN2510BitModify                       text16       006FEC
+_CAN2510BitTimeInit                     text12       0070D6
+_CAN2510ByteRead                        text20       006F58
+_CAN2510ByteWrite                       text13       006F86
+_CAN2510DataRead                        text15       00786E
+_CAN2510Disable                         text24       006E9E
+_CAN2510Enable                          text23       006EA4
+_CAN2510ErrorState                      text14       006FB8
+_CAN2510Init                            text7        0075C6
+_CAN2510InterruptStatus                 text19       006EAA
+_CAN2510ReadMode                        text11       006EB4
+_CAN2510Reset                           text10       006F0A
+_CAN2510SetMode                         text9        006F20
+_CAN2510SetMsgFilterStd                 text4        0074BA
+_CAN2510SetSingleFilterStd              text6        00718A
+_CAN2510SetSingleMaskStd                text5        00702A
+_LATC                                   (abs)        000F8B
+_OpenSPI                                text8        00707E
+_PIR1bits                               (abs)        000F9E
+_RC6                                    (abs)        007C16
+_ReadSPI                                text22       006EE2
+_SPBRG                                  (abs)        000FAF
+_SPEN                                   (abs)        007D5F
+_SSPBUF                                 (abs)        000FC9
+_SSPCON1                                (abs)        000FC6
+_SSPCON1bits                            (abs)        000FC6
+_SSPSTAT                                (abs)        000FC7
+_SSPSTATbits                            (abs)        000FC7
+_SYNC                                   (abs)        007D64
+_TRISAbits                              (abs)        000F92
+_TRISBbits                              (abs)        000F93
+_TRISC                                  (abs)        000F94
+_TRISCbits                              (abs)        000F94
+_TRMT                                   (abs)        007D61
+_TXEN                                   (abs)        007D65
+_TXREG                                  (abs)        000FAD
+_WriteSPI                               text21       006F38
+__CFG_BOR$ON                            (abs)        000000
+__CFG_BORV$3                            (abs)        000000
+__CFG_CCP2MX$OFF                        (abs)        000000
+__CFG_CP0$OFF                           (abs)        000000
+__CFG_CP1$OFF                           (abs)        000000
+__CFG_CP2$OFF                           (abs)        000000
+__CFG_CP3$OFF                           (abs)        000000
+__CFG_CPB$OFF                           (abs)        000000
+__CFG_CPD$OFF                           (abs)        000000
+__CFG_CPUDIV$OSC1_PLL2                  (abs)        000000
+__CFG_EBTR0$OFF                         (abs)        000000
+__CFG_EBTR1$OFF                         (abs)        000000
+__CFG_EBTR2$OFF                         (abs)        000000
+__CFG_EBTR3$OFF                         (abs)        000000
+__CFG_EBTRB$OFF                         (abs)        000000
+__CFG_FCMEN$OFF                         (abs)        000000
+__CFG_FOSC$HS                           (abs)        000000
+__CFG_IESO$OFF                          (abs)        000000
+__CFG_LPT1OSC$OFF                       (abs)        000000
+__CFG_LVP$OFF                           (abs)        000000
+__CFG_MCLRE$ON                          (abs)        000000
+__CFG_PBADEN$OFF                        (abs)        000000
+__CFG_PLLDIV$1                          (abs)        000000
+__CFG_PWRT$ON                           (abs)        000000
+__CFG_STVREN$ON                         (abs)        000000
+__CFG_USBDIV$1                          (abs)        000000
+__CFG_VREGEN$OFF                        (abs)        000000
+__CFG_WDT$OFF                           (abs)        000000
+__CFG_WDTPS$32768                       (abs)        000000
+__CFG_WRT0$OFF                          (abs)        000000
+__CFG_WRT1$OFF                          (abs)        000000
+__CFG_WRT2$OFF                          (abs)        000000
+__CFG_WRT3$OFF                          (abs)        000000
+__CFG_WRTB$OFF                          (abs)        000000
+__CFG_WRTC$OFF                          (abs)        000000
+__CFG_WRTD$OFF                          (abs)        000000
+__CFG_XINST$OFF                         (abs)        000000
+__HRAM                                  (abs)        000000
+__Habs1                                 abs1         000000
+__Hbank0                                bank0        000000
+__Hbank1                                bank1        000000
+__Hbank2                                bank2        000000
+__Hbank3                                bank3        000000
+__Hbank4                                bank4        000000
+__Hbank5                                bank5        000000
+__Hbank6                                bank6        000000
+__Hbank7                                bank7        000000
+__Hbigbss                               bigbss       000000
+__Hbigdata                              bigdata      000000
+__Hbigram                               bigram       000000
+__Hbss                                  bss          000000
+__HbssBANK0                             bssBANK0     000000
+__HbssCOMRAM                            bssCOMRAM    000000
+__Hcinit                                cinit        000000
+__Hclrtext                              clrtext      000000
+__Hcomram                               comram       000000
+__Hconfig                               config       30000E
+__Hconst                                const        000000
+__HcstackBANK0                          cstackBANK0  000000
+__HcstackCOMRAM                         cstackCOMRAM 000000
+__Hdata                                 data         000000
+__HdataBANK0                            dataBANK0    000000
+__HdataBANK1                            dataBANK1    000000
+__HdataCOMRAM                           dataCOMRAM   000000
+__Heeprom_data                          eeprom_data  000000
+__Hend_init                             end_init     000004
+__Hfarbss                               farbss       000000
+__Hfardata                              fardata      000000
+__Hibigdata                             ibigdata     000000
+__Hidata                                idata        000000
+__HidataBANK0                           idataBANK0   000000
+__HidataBANK1                           idataBANK1   000000
+__HidataCOMRAM                          idataCOMRAM  000000
+__Hidloc                                idloc        200008
+__Hifardata                             ifardata     000000
+__Hinit                                 init         000000
+__Hintcode                              intcode      000000
+__Hintcode_body                         intcode_body 000000
+__Hintcodelo                            intcodelo    000000
+__Hintentry                             intentry     000000
+__Hintret                               intret       000000
+__Hintsave_regs                         intsave_regs 000000
+__Hirdata                               irdata       000000
+__Hmediumconst                          mediumconst  000000
+__HnvFARRAM                             nvFARRAM     000000
+__Hnvbit                                nvbit        000000
+__Hnvrram                               nvrram       000000
+__Hparam                                rparam       000000
+__Hpowerup                              powerup      000000
+__Hram                                  ram          000000
+__Hramtop                               ramtop       000800
+__Hrbit                                 rbit         000000
+__Hrbss                                 rbss         000000
+__Hrdata                                rdata        000000
+__Hreset_vec                            reset_vec    000000
+__Hrparam                               rparam       000000
+__Hsfr                                  sfr          000000
+__Hsmallconst                           smallconst   000000
+__Hstack                                stack        000000
+__Hstruct                               struct       000000
+__Htemp                                 temp         000000
+__Htext                                 text         000000
+__Htext0                                text0        000000
+__Htext1                                text1        000000
+__Htext10                               text10       000000
+__Htext11                               text11       000000
+__Htext12                               text12       000000
+__Htext13                               text13       000000
+__Htext14                               text14       000000
+__Htext15                               text15       000000
+__Htext16                               text16       000000
+__Htext17                               text17       000000
+__Htext18                               text18       000000
+__Htext19                               text19       000000
+__Htext2                                text2        000000
+__Htext20                               text20       000000
+__Htext21                               text21       000000
+__Htext22                               text22       000000
+__Htext23                               text23       000000
+__Htext24                               text24       000000
+__Htext3                                text3        000000
+__Htext4                                text4        000000
+__Htext5                                text5        000000
+__Htext6                                text6        000000
+__Htext7                                text7        000000
+__Htext8                                text8        000000
+__Htext9                                text9        000000
+__LRAM                                  (abs)        000001
+__Labs1                                 abs1         000000
+__Lbank0                                bank0        000000
+__Lbank1                                bank1        000000
+__Lbank2                                bank2        000000
+__Lbank3                                bank3        000000
+__Lbank4                                bank4        000000
+__Lbank5                                bank5        000000
+__Lbank6                                bank6        000000
+__Lbank7                                bank7        000000
+__Lbigbss                               bigbss       000000
+__Lbigdata                              bigdata      000000
+__Lbigram                               bigram       000000
+__Lbss                                  bss          000000
+__LbssBANK0                             bssBANK0     000000
+__LbssCOMRAM                            bssCOMRAM    000000
+__Lcinit                                cinit        000000
+__Lclrtext                              clrtext      000000
+__Lcomram                               comram       000000
+__Lconfig                               config       300000
+__Lconst                                const        000000
+__LcstackBANK0                          cstackBANK0  000000
+__LcstackCOMRAM                         cstackCOMRAM 000000
+__Ldata                                 data         000000
+__LdataBANK0                            dataBANK0    000000
+__LdataBANK1                            dataBANK1    000000
+__LdataCOMRAM                           dataCOMRAM   000000
+__Leeprom_data                          eeprom_data  000000
+__Lend_init                             end_init     000000
+__Lfarbss                               farbss       000000
+__Lfardata                              fardata      000000
+__Libigdata                             ibigdata     000000
+__Lidata                                idata        000000
+__LidataBANK0                           idataBANK0   000000
+__LidataBANK1                           idataBANK1   000000
+__LidataCOMRAM                          idataCOMRAM  000000
+__Lidloc                                idloc        200000
+__Lifardata                             ifardata     000000
+__Linit                                 init         000000
+__Lintcode                              intcode      000000
+__Lintcode_body                         intcode_body 000000
+__Lintcodelo                            intcodelo    000000
+__Lintentry                             intentry     000000
+__Lintret                               intret       000000
+__Lintsave_regs                         intsave_regs 000000
+__Lirdata                               irdata       000000
+__Lmediumconst                          mediumconst  000000
+__LnvFARRAM                             nvFARRAM     000000
+__Lnvbit                                nvbit        000000
+__Lnvrram                               nvrram       000000
+__Lparam                                rparam       000000
+__Lpowerup                              powerup      000000
+__Lram                                  ram          000000
+__Lramtop                               ramtop       000800
+__Lrbit                                 rbit         000000
+__Lrbss                                 rbss         000000
+__Lrdata                                rdata        000000
+__Lreset_vec                            reset_vec    000000
+__Lrparam                               rparam       000000
+__Lsfr                                  sfr          000000
+__Lsmallconst                           smallconst   000000
+__Lstack                                stack        000000
+__Lstruct                               struct       000000
+__Ltemp                                 temp         000000
+__Ltext                                 text         000000
+__Ltext0                                text0        000000
+__Ltext1                                text1        000000
+__Ltext10                               text10       000000
+__Ltext11                               text11       000000
+__Ltext12                               text12       000000
+__Ltext13                               text13       000000
+__Ltext14                               text14       000000
+__Ltext15                               text15       000000
+__Ltext16                               text16       000000
+__Ltext17                               text17       000000
+__Ltext18                               text18       000000
+__Ltext19                               text19       000000
+__Ltext2                                text2        000000
+__Ltext20                               text20       000000
+__Ltext21                               text21       000000
+__Ltext22                               text22       000000
+__Ltext23                               text23       000000
+__Ltext24                               text24       000000
+__Ltext3                                text3        000000
+__Ltext4                                text4        000000
+__Ltext5                                text5        000000
+__Ltext6                                text6        000000
+__Ltext7                                text7        000000
+__Ltext8                                text8        000000
+__Ltext9                                text9        000000
+__S0                                    (abs)        30000E
+__S1                                    (abs)        0001A7
+__S2                                    (abs)        000000
+___inthi_sp                             stack        000000
+___intlo_sp                             stack        000000
+___sp                                   stack        000000
+__accesstop                             (abs)        000060
+__activetblptr                          (abs)        000002
+__end_of_CAN2510BitModify               text16       00702A
+__end_of_CAN2510BitTimeInit             text12       007130
+__end_of_CAN2510ByteRead                text20       006F86
+__end_of_CAN2510ByteWrite               text13       006FB8
+__end_of_CAN2510DataRead                text15       007B48
+__end_of_CAN2510Disable                 text24       006EA4
+__end_of_CAN2510Enable                  text23       006EAA
+__end_of_CAN2510ErrorState              text14       006FEC
+__end_of_CAN2510Init                    text7        0076F8
+__end_of_CAN2510InterruptStatus         text19       006EB4
+__end_of_CAN2510ReadMode                text11       006EC2
+__end_of_CAN2510Reset                   text10       006F20
+__end_of_CAN2510SetMode                 text9        006F38
+__end_of_CAN2510SetMsgFilterStd         text4        0075C6
+__end_of_CAN2510SetSingleFilterStd      text6        0071F4
+__end_of_CAN2510SetSingleMaskStd        text5        00707E
+__end_of_OpenSPI                        text8        0070D6
+__end_of_ReadSPI                        text22       006EF4
+__end_of_WriteSPI                       text21       006F58
+__end_of__initialization                cinit        00726C
+__end_of_can_init                       text3        0074BA
+__end_of_can_serial_transmit_msg        text17       008000
+__end_of_error_handle                   text2        00786E
+__end_of_interrupt_handle               text1        00730E
+__end_of_main                           text0        00718A
+__end_of_serial_transmit                text18       006EE2
+__initialization                        cinit        0071F4
+__mediumconst                           mediumconst  000000
+__pbssBANK0                             bssBANK0     0000C7
+__pbssCOMRAM                            bssCOMRAM    00004A
+__pcinit                                cinit        0071F4
+__pcstackBANK0                          cstackBANK0  000060
+__pcstackCOMRAM                         cstackCOMRAM 000001
+__pdataBANK0                            dataBANK0    0000E2
+__pdataBANK1                            dataBANK1    000100
+__pdataCOMRAM                           dataCOMRAM   00003B
+__pidataBANK0                           idataBANK0   006EF5
+__pidataBANK1                           idataBANK1   00730F
+__pidataCOMRAM                          idataCOMRAM  006EC3
+__ptext0                                text0        007130
+__ptext1                                text1        007276
+__ptext10                               text10       006F0A
+__ptext11                               text11       006EB4
+__ptext12                               text12       0070D6
+__ptext13                               text13       006F86
+__ptext14                               text14       006FB8
+__ptext15                               text15       00786E
+__ptext16                               text16       006FEC
+__ptext17                               text17       007B48
+__ptext18                               text18       006ED2
+__ptext19                               text19       006EAA
+__ptext2                                text2        0076F8
+__ptext20                               text20       006F58
+__ptext21                               text21       006F38
+__ptext22                               text22       006EE2
+__ptext23                               text23       006EA4
+__ptext24                               text24       006E9E
+__ptext3                                text3        0073B6
+__ptext4                                text4        0074BA
+__ptext5                                text5        00702A
+__ptext6                                text6        00718A
+__ptext7                                text7        0075C6
+__ptext8                                text8        00707E
+__ptext9                                text9        006F20
+__ramtop                                ramtop       000800
+__size_of_CAN2510BitModify              (abs)        000000
+__size_of_CAN2510BitTimeInit            (abs)        000000
+__size_of_CAN2510ByteRead               (abs)        000000
+__size_of_CAN2510ByteWrite              (abs)        000000
+__size_of_CAN2510DataRead               (abs)        000000
+__size_of_CAN2510Disable                (abs)        000000
+__size_of_CAN2510Enable                 (abs)        000000
+__size_of_CAN2510ErrorState             (abs)        000000
+__size_of_CAN2510Init                   (abs)        000000
+__size_of_CAN2510InterruptStatus        (abs)        000000
+__size_of_CAN2510ReadMode               (abs)        000000
+__size_of_CAN2510Reset                  (abs)        000000
+__size_of_CAN2510SetMode                (abs)        000000
+__size_of_CAN2510SetMsgFilterStd        (abs)        000000
+__size_of_CAN2510SetSingleFilterStd     (abs)        000000
+__size_of_CAN2510SetSingleMaskStd       (abs)        000000
+__size_of_OpenSPI                       (abs)        000000
+__size_of_ReadSPI                       (abs)        000000
+__size_of_WriteSPI                      (abs)        000000
+__size_of_can_init                      (abs)        000000
+__size_of_can_serial_transmit_msg       (abs)        000000
+__size_of_error_handle                  (abs)        000000
+__size_of_interrupt_handle              (abs)        000000
+__size_of_main                          (abs)        000000
+__size_of_serial_transmit               (abs)        000000
+__smallconst                            smallconst   000000
+_buffer_num                             bssCOMRAM    000056
+_can_init                               text3        0073B6
+_can_msg_ID_0                           bssBANK0     0000D8
+_can_msg_ID_1                           bssBANK0     0000DC
+_can_serial_transmit_msg                text17       007B48
+_error_handle                           text2        0076F8
+_interrupt_handle                       text1        007276
+_main                                   text0        007130
+_msgID0                                 dataBANK0    0000EB
+_msgID1                                 dataBANK0    0000ED
+_msg_stat                               bssBANK0     0000C7
+_num_bytes_0                            bssBANK0     0000E0
+_num_bytes_1                            bssBANK0     0000E1
+_numbytes0                              dataBANK0    0000EF
+_numbytes1                              dataBANK0    0000F1
+_receive_flag                           bssCOMRAM    000057
+_rx_data_0                              bssBANK0     0000C8
+_rx_data_1                              bssBANK0     0000D0
+_rxdata0                                dataBANK0    0000F3
+_rxdata1                                dataBANK0    0000F5
+_serial_transmit                        text18       006ED2
+can_init@F4819                          bssCOMRAM    00004A
+can_init@F4823                          dataCOMRAM   000046
+can_init@SPI_bus                        cstackCOMRAM 000034
+can_init@SPI_phase                      cstackCOMRAM 000035
+can_init@SPI_sync                       cstackCOMRAM 000033
+can_init@buffer_config                  cstackCOMRAM 00002C
+can_init@can_init_stat                  cstackCOMRAM 00001D
+can_init@filter_0_stat                  cstackCOMRAM 00001E
+can_init@filter_1_stat                  cstackCOMRAM 00001F
+can_init@filter_B0                      cstackCOMRAM 000020
+can_init@filter_B1                      cstackCOMRAM 000024
+can_init@interrupt_en                   cstackCOMRAM 000032
+can_init@mask_B0                        cstackCOMRAM 000028
+can_init@mask_B1                        cstackCOMRAM 00002A
+can_init@timing_config                  cstackCOMRAM 00002F
+can_serial_transmit_msg@F4830           dataBANK1    000156
+can_serial_transmit_msg@F4832           dataBANK1    000169
+can_serial_transmit_msg@F4834           dataBANK1    00018B
+can_serial_transmit_msg@F4836           dataBANK1    000199
+can_serial_transmit_msg@F4838           dataBANK1    00017C
+can_serial_transmit_msg@F4840           dataBANK0    0000E2
+can_serial_transmit_msg@F4842           dataCOMRAM   00003B
+can_serial_transmit_msg@buffer_0_msg    cstackBANK0  000060
+can_serial_transmit_msg@buffer_1_msg    cstackBANK0  00006E
+can_serial_transmit_msg@data_msg        cstackBANK0  0000B1
+can_serial_transmit_msg@i               cstackBANK0  0000C6
+can_serial_transmit_msg@id_msg          cstackBANK0  0000BC
+can_serial_transmit_msg@no_of_bytes_msg cstackBANK0  0000A2
+can_serial_transmit_msg@std_msg         cstackBANK0  00007C
+can_serial_transmit_msg@u               cstackBANK0  0000C5
+can_serial_transmit_msg@xtd_msg         cstackBANK0  00008F
+end_of_initialization                   cinit        00726C
+error_handle@F4848                      dataBANK1    000127
+error_handle@F4850                      dataBANK1    000100
+error_handle@F4852                      dataBANK1    000140
+error_handle@all_clear_msg              cstackBANK0  0000A0
+error_handle@error_flag                 cstackBANK0  0000B6
+error_handle@j                          cstackBANK0  0000B7
+error_handle@reset_msg                  cstackBANK0  000079
+error_handle@warning_msg                cstackBANK0  000060
+interrupt_handle@interrupt_report       cstackCOMRAM 000038
+intlevel0                               text         000000
+intlevel1                               text         000000
+intlevel2                               text         000000
+intlevel3                               text         000000
+main@can_interrupt_stat                 cstackCOMRAM 00003A
+serial_transmit@m                       cstackCOMRAM 000001
+stackhi                                 (abs)        0007FF
+stacklo                                 (abs)        0001A7
+start                                   init         000000
+start_initialization                    cinit        0071F4
+
+
+FUNCTION INFORMATION:
+
+ *************** function _main *****************
+ Defined at:
+		line 101 in file "CAN_RX.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  can_interrup    1   57[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels required when called:    7
+ This function calls:
+		_CAN2510InterruptStatus
+		_can_init
+		_can_serial_transmit_msg
+		_interrupt_handle
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+ *************** function _interrupt_handle *****************
+ Defined at:
+		line 162 in file "CAN_RX.c"
+ Parameters:    Size  Location     Type
+  interrupt_re    1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  interrupt_re    1   55[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_CAN2510DataRead
+		_error_handle
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _error_handle *****************
+ Defined at:
+		line 315 in file "CAN_RX.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  reset_msg      39   25[BANK0 ] unsigned char [39]
+  warning_msg    25    0[BANK0 ] unsigned char [25]
+  all_clear_ms   22   64[BANK0 ] unsigned char [22]
+  j               1   87[BANK0 ] unsigned char 
+  error_flag      1   86[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:         0      88       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0
+      Totals:         1      88       0       0       0       0       0       0       0
+Total ram usage:       89 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		_CAN2510ErrorState
+		_CAN2510Reset
+		_can_init
+		_serial_transmit
+ This function is called by:
+		_interrupt_handle
+ This function uses a non-reentrant model
+
+
+ *************** function _can_init *****************
+ Defined at:
+		line 127 in file "CAN_RX.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  filter_B1       4   35[COMRAM] unsigned int [2]
+  filter_B0       4   31[COMRAM] unsigned int [2]
+  timing_confi    3   46[COMRAM] unsigned um
+  buffer_confi    3   43[COMRAM] unsigned um
+  mask_B1         2   41[COMRAM] unsigned int 
+  mask_B0         2   39[COMRAM] unsigned int 
+  SPI_phase       1   52[COMRAM] unsigned char 
+  SPI_bus         1   51[COMRAM] unsigned char 
+  SPI_sync        1   50[COMRAM] unsigned char 
+  interrupt_en    1   49[COMRAM] unsigned char 
+  filter_1_sta    1   30[COMRAM] unsigned char 
+  filter_0_sta    1   29[COMRAM] unsigned char 
+  can_init_sta    1   28[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:        25       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0
+      Totals:        26       0       0       0       0       0       0       0       0
+Total ram usage:       26 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_CAN2510Enable
+		_CAN2510Init
+		_CAN2510ReadMode
+		_CAN2510SetMode
+		_CAN2510SetMsgFilterStd
+ This function is called by:
+		_main
+		_error_handle
+ This function uses a non-reentrant model
+
+
+ *************** function _CAN2510SetMsgFilterStd *****************
+ Defined at:
+		line 8 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canfms.c"
+ Parameters:    Size  Location     Type
+  bufferNum       1    wreg     unsigned char 
+  mask            2   11[COMRAM] unsigned int 
+  filters         2   13[COMRAM] PTR unsigned int 
+		 -> can_init@filter_B1(4), can_init@filter_B0(4), 
+ Auto vars:     Size  Location     Type
+  bufferNum       1   16[COMRAM] unsigned char 
+  counter2        1   18[COMRAM] unsigned char 
+  counter1        1   17[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      char 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         4       0       0       0       0       0       0       0       0
+      Locals:         3       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0
+      Totals:         8       0       0       0       0       0       0       0       0
+Total ram usage:        8 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_CAN2510ByteWrite
+		_CAN2510ReadMode
+		_CAN2510SetMode
+		_CAN2510SetSingleFilterStd
+		_CAN2510SetSingleMaskStd
+ This function is called by:
+		_can_init
+ This function uses a non-reentrant model
+
+
+ *************** function _CAN2510SetSingleMaskStd *****************
+ Defined at:
+		line 9 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canmasks.c"
+ Parameters:    Size  Location     Type
+  maskNum         1    wreg     unsigned char 
+  mask            2    4[COMRAM] unsigned int 
+ Auto vars:     Size  Location     Type
+  maskNum         1    9[COMRAM] unsigned char 
+  writeValue      1    8[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         2       0       0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0       0       0
+      Temps:          2       0       0       0       0       0       0       0       0
+      Totals:         6       0       0       0       0       0       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_CAN2510ByteWrite
+ This function is called by:
+		_CAN2510SetMsgFilterStd
+ This function uses a non-reentrant model
+
+
+ *************** function _CAN2510SetSingleFilterStd *****************
+ Defined at:
+		line 16 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canfilts.c"
+ Parameters:    Size  Location     Type
+  filterNum       1    wreg     unsigned char 
+  filter          2    4[COMRAM] unsigned int 
+ Auto vars:     Size  Location     Type
+  filterNum       1   10[COMRAM] unsigned char 
+  addr            1    9[COMRAM] unsigned char 
+  writeValue      1    8[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         2       0       0       0       0       0       0       0       0
+      Locals:         3       0       0       0       0       0       0       0       0
+      Temps:          2       0       0       0       0       0       0       0       0
+      Totals:         7       0       0       0       0       0       0       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_CAN2510ByteWrite
+ This function is called by:
+		_CAN2510SetMsgFilterStd
+ This function uses a non-reentrant model
+
+
+ *************** function _CAN2510Init *****************
+ Defined at:
+		line 117 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\caninit.c"
+ Parameters:    Size  Location     Type
+  BufferConfig    4    9[COMRAM] unsigned long 
+  BitTimeConfi    4   13[COMRAM] unsigned long 
+  interruptEna    1   17[COMRAM] unsigned char 
+  SPI_syncMode    1   18[COMRAM] unsigned char 
+  SPI_busMode     1   19[COMRAM] unsigned char 
+  SPI_smpPhase    1   20[COMRAM] unsigned char 
+ Auto vars:     Size  Location     Type
+  counter2        1   26[COMRAM] unsigned char 
+  counter1        1   25[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      char 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:        12       0       0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0       0       0
+      Temps:          4       0       0       0       0       0       0       0       0
+      Totals:        18       0       0       0       0       0       0       0       0
+Total ram usage:       18 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_CAN2510BitTimeInit
+		_CAN2510ByteWrite
+		_CAN2510ReadMode
+		_CAN2510Reset
+		_CAN2510SetMode
+		_OpenSPI
+ This function is called by:
+		_can_init
+ This function uses a non-reentrant model
+
+
+ *************** function _OpenSPI *****************
+ Defined at:
+		line 14 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\SPI\spi_open.c"
+ Parameters:    Size  Location     Type
+  sync_mode       1    wreg     unsigned char 
+  bus_mode        1    0[COMRAM] unsigned char 
+  smp_phase       1    1[COMRAM] unsigned char 
+ Auto vars:     Size  Location     Type
+  sync_mode       1    2[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         2       0       0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         3       0       0       0       0       0       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_CAN2510Init
+ This function uses a non-reentrant model
+
+
+ *************** function _CAN2510SetMode *****************
+ Defined at:
+		line 8 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canmodes.c"
+ Parameters:    Size  Location     Type
+  mode            1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  mode            1    6[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_CAN2510BitModify
+ This function is called by:
+		_can_init
+		_CAN2510SetMsgFilterStd
+		_CAN2510Init
+ This function uses a non-reentrant model
+
+
+ *************** function _CAN2510Reset *****************
+ Defined at:
+		line 9 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\CANreset.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_CAN2510Disable
+		_CAN2510Enable
+		_WriteSPI
+ This function is called by:
+		_error_handle
+		_CAN2510Init
+ This function uses a non-reentrant model
+
+
+ *************** function _CAN2510ReadMode *****************
+ Defined at:
+		line 8 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canmoder.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  mode            1    4[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         1       0       0       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_CAN2510ByteRead
+ This function is called by:
+		_can_init
+		_CAN2510SetMsgFilterStd
+		_CAN2510Init
+ This function uses a non-reentrant model
+
+
+ *************** function _CAN2510BitTimeInit *****************
+ Defined at:
+		line 226 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\caninit.c"
+ Parameters:    Size  Location     Type
+  BitTimeConfi    4    4[COMRAM] unsigned long 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         4       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0
+      Totals:         5       0       0       0       0       0       0       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_CAN2510ByteWrite
+ This function is called by:
+		_CAN2510Init
+ This function uses a non-reentrant model
+
+
+ *************** function _CAN2510ByteWrite *****************
+ Defined at:
+		line 9 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\WrtByte.c"
+ Parameters:    Size  Location     Type
+  addr            1    wreg     unsigned char 
+  value           1    2[COMRAM] unsigned char 
+ Auto vars:     Size  Location     Type
+  addr            1    3[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         1       0       0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_CAN2510Disable
+		_CAN2510Enable
+		_WriteSPI
+ This function is called by:
+		_CAN2510SetMsgFilterStd
+		_CAN2510Init
+		_CAN2510BitTimeInit
+		_CAN2510SetSingleMaskStd
+		_CAN2510SetSingleFilterStd
+ This function uses a non-reentrant model
+
+
+ *************** function _CAN2510ErrorState *****************
+ Defined at:
+		line 8 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canerrst.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  BufferEFLG      1    4[COMRAM] struct EFLG
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         1       0       0       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_CAN2510ByteRead
+ This function is called by:
+		_error_handle
+ This function uses a non-reentrant model
+
+
+ *************** function _CAN2510DataRead *****************
+ Defined at:
+		line 8 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canread.c"
+ Parameters:    Size  Location     Type
+  bufferNum       1    wreg     unsigned char 
+  msgId           2    5[COMRAM] PTR unsigned long 
+		 -> can_msg_ID_0(4), can_msg_ID_1(4), 
+  numBytes        2    7[COMRAM] PTR unsigned char 
+		 -> num_bytes_0(1), num_bytes_1(1), 
+  data            2    9[COMRAM] PTR unsigned char 
+		 -> rx_data_0(8), rx_data_1(8), 
+ Auto vars:     Size  Location     Type
+  bufferNum       1   17[COMRAM] unsigned char 
+  tempSIDL        1   18[COMRAM] unsigned char 
+  result          1   16[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         6       0       0       0       0       0       0       0       0
+      Locals:         3       0       0       0       0       0       0       0       0
+      Temps:          5       0       0       0       0       0       0       0       0
+      Totals:        14       0       0       0       0       0       0       0       0
+Total ram usage:       14 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_CAN2510BitModify
+		_CAN2510ByteRead
+ This function is called by:
+		_interrupt_handle
+ This function uses a non-reentrant model
+
+
+ *************** function _CAN2510BitModify *****************
+ Defined at:
+		line 16 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\CANbmod.c"
+ Parameters:    Size  Location     Type
+  addr            1    wreg     unsigned char 
+  mask            1    2[COMRAM] unsigned char 
+  value           1    3[COMRAM] unsigned char 
+ Auto vars:     Size  Location     Type
+  addr            1    4[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         2       0       0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         3       0       0       0       0       0       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_CAN2510Disable
+		_CAN2510Enable
+		_WriteSPI
+ This function is called by:
+		_CAN2510SetMode
+		_CAN2510DataRead
+ This function uses a non-reentrant model
+
+
+ *************** function _can_serial_transmit_msg *****************
+ Defined at:
+		line 204 in file "CAN_RX.c"
+ Parameters:    Size  Location     Type
+  u               1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  u               1  101[BANK0 ] unsigned char 
+  xtd_msg        19   47[BANK0 ] unsigned char [19]
+  std_msg        19   28[BANK0 ] unsigned char [19]
+  no_of_bytes_   15   66[BANK0 ] unsigned char [15]
+  buffer_1_msg   14   14[BANK0 ] unsigned char [14]
+  buffer_0_msg   14    0[BANK0 ] unsigned char [14]
+  data_msg       11   81[BANK0 ] unsigned char [11]
+  id_msg          9   92[BANK0 ] unsigned char [9]
+  i               1  102[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:         0     103       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0
+      Totals:         1     103       0       0       0       0       0       0       0
+Total ram usage:      104 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_serial_transmit
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _serial_transmit *****************
+ Defined at:
+		line 197 in file "CAN_RX.c"
+ Parameters:    Size  Location     Type
+  m               1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  m               1    0[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         1       0       0       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_can_serial_transmit_msg
+		_error_handle
+ This function uses a non-reentrant model
+
+
+ *************** function _CAN2510InterruptStatus *****************
+ Defined at:
+		line 9 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canints.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_CAN2510ByteRead
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _CAN2510ByteRead *****************
+ Defined at:
+		line 9 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\ReadByte.c"
+ Parameters:    Size  Location     Type
+  addr            1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  addr            1    2[COMRAM] unsigned char 
+  ReturnValue     1    3[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_CAN2510Disable
+		_CAN2510Enable
+		_ReadSPI
+		_WriteSPI
+ This function is called by:
+		_CAN2510ErrorState
+		_CAN2510InterruptStatus
+		_CAN2510ReadMode
+		_CAN2510DataRead
+ This function uses a non-reentrant model
+
+
+ *************** function _WriteSPI *****************
+ Defined at:
+		line 13 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\SPI\spi_writ.c"
+ Parameters:    Size  Location     Type
+  data_out        1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  data_out        1    1[COMRAM] unsigned char 
+  TempVar         1    0[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      char 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_CAN2510Reset
+		_CAN2510BitModify
+		_CAN2510ByteRead
+		_CAN2510ByteWrite
+ This function uses a non-reentrant model
+
+
+ *************** function _ReadSPI *****************
+ Defined at:
+		line 12 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\SPI\spi_read.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  TempVar         1    0[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         1       0       0       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_CAN2510ByteRead
+ This function uses a non-reentrant model
+
+
+ *************** function _CAN2510Enable *****************
+ Defined at:
+		line 16 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\CANenabl.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_can_init
+		_CAN2510Reset
+		_CAN2510BitModify
+		_CAN2510ByteRead
+		_CAN2510ByteWrite
+ This function uses a non-reentrant model
+
+
+ *************** function _CAN2510Disable *****************
+ Defined at:
+		line 38 in file "D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\CANenabl.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_CAN2510Reset
+		_CAN2510BitModify
+		_CAN2510ByteRead
+		_CAN2510ByteWrite
+ This function uses a non-reentrant model
+
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\ReadByte.c
+		_CAN2510ByteRea		CODE           	6F58	0000	46
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\ReadByte.c estimated size: 46
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\caninit.c
+		_CAN2510BitTime		CODE           	70D6	0000	90
+		_CAN2510Init   		CODE           	75C6	0000	306
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\caninit.c estimated size: 396
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\SPI\spi_writ.c
+		_WriteSPI      		CODE           	6F38	0000	32
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\SPI\spi_writ.c estimated size: 32
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canmasks.c
+		_CAN2510SetSing		CODE           	702A	0000	84
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canmasks.c estimated size: 84
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\CANbmod.c
+		_CAN2510BitModi		CODE           	6FEC	0000	62
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\CANbmod.c estimated size: 62
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\SPI\spi_read.c
+		_ReadSPI       		CODE           	6EE2	0000	18
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\SPI\spi_read.c estimated size: 18
+
+shared
+		__initializatio		CODE           	71F4	0000	120
+
+shared estimated size: 120
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canread.c
+		_CAN2510DataRea		CODE           	786E	0000	730
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canread.c estimated size: 730
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canints.c
+		_CAN2510Interru		CODE           	6EAA	0000	10
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canints.c estimated size: 10
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canerrst.c
+		_CAN2510ErrorSt		CODE           	6FB8	0000	52
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canerrst.c estimated size: 52
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canfilts.c
+		_CAN2510SetSing		CODE           	718A	0000	106
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canfilts.c estimated size: 106
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\WrtByte.c
+		_CAN2510ByteWri		CODE           	6F86	0000	50
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\WrtByte.c estimated size: 50
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canmoder.c
+		_CAN2510ReadMod		CODE           	6EB4	0000	14
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canmoder.c estimated size: 14
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canfms.c
+		_CAN2510SetMsgF		CODE           	74BA	0000	268
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canfms.c estimated size: 268
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canmodes.c
+		_CAN2510SetMode		CODE           	6F20	0000	24
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\canmodes.c estimated size: 24
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\SPI\spi_open.c
+		_OpenSPI       		CODE           	707E	0000	88
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\SPI\spi_open.c estimated size: 88
+
+CAN_RX.c
+		_can_serial_tra		CODE           	7B48	0000	1208
+		_serial_transmi		CODE           	6ED2	0000	16
+		_can_init      		CODE           	73B6	0000	260
+		_main          		CODE           	7130	0000	90
+		_interrupt_hand		CODE           	7276	0000	152
+		_error_handle  		CODE           	76F8	0000	374
+
+CAN_RX.c estimated size: 2100
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\CANreset.c
+		_CAN2510Reset  		CODE           	6F0A	0000	22
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\CANreset.c estimated size: 22
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\CANenabl.c
+		_CAN2510Disable		CODE           	6E9E	0000	6
+		_CAN2510Enable 		CODE           	6EA4	0000	6
+
+D:\Microchip\xc8\v1.31\sources\pic18\plib\CAN2510\CANenabl.c estimated size: 12
+

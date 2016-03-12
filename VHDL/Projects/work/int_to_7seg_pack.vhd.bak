@@ -1,0 +1,16 @@
+PACKAGE int_to_7seg_pack IS
+
+END PACKAGE int_to_7seg_pack;
+
+PACKAGE BODY int_to_7seg_pack IS
+
+PROCEDURE int_to_bcd(SIGNAL int_val : IN INTEGER; SIGNAL bcd2, bcd1, bcd0: OUT INTEGER) IS
+VARIABLE temp: INTEGER:=int_val;
+BEGIN
+    bcd0<=temp MOD 10;
+    temp:=temp/10;
+    bcd1<=temp MOD 10;
+    bcd2<=temp/10;
+END int_to_bcd;
+
+END int_to_7seg_pack;

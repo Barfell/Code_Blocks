@@ -1,0 +1,735 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dG:/Altera/15.0
+Eadd_subb
+Z0 w1441977754
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dG:/Altera/15.0/Projects
+Z4 8G:/Altera/15.0/Projects/adder_subtractor_generic.vhd
+Z5 FG:/Altera/15.0/Projects/adder_subtractor_generic.vhd
+l0
+L6
+VT[H_lMZVLHcHAShBG`C053
+!s100 jE92b@oWI3;S<5<SGX8<n3
+Z6 OV;C;10.3d;59
+32
+Z7 !s110 1441977765
+!i10b 1
+Z8 !s108 1441977765.602000
+Z9 !s90 -reportprogress|300|-work|work|G:/Altera/15.0/Projects/adder_subtractor_generic.vhd|
+Z10 !s107 G:/Altera/15.0/Projects/adder_subtractor_generic.vhd|
+!i113 1
+Z11 o-work work
+Z12 tExplicit 1
+Astructural
+R1
+R2
+DEx4 work 8 add_subb 0 22 T[H_lMZVLHcHAShBG`C053
+l22
+L15
+V9dFUB1JYEGiDljL>_k=4n3
+!s100 nBATFo?^QYdH74GWLmXOW0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ealu
+Z13 w1441990949
+R1
+R2
+R3
+Z14 8G:/Altera/15.0/Projects/alu.vhd
+Z15 FG:/Altera/15.0/Projects/alu.vhd
+l0
+L4
+VCcJ?MdbDZI^LUDd=Pc7l<1
+!s100 lCl:m@jmhK2=lXJcXObRb3
+R6
+32
+Z16 !s110 1441990955
+!i10b 1
+Z17 !s108 1441990955.405000
+Z18 !s90 -reportprogress|300|-work|work|G:/Altera/15.0/Projects/alu.vhd|
+Z19 !s107 G:/Altera/15.0/Projects/alu.vhd|
+!i113 1
+R11
+R12
+Astructural
+R1
+R2
+DEx4 work 3 alu 0 22 CcJ?MdbDZI^LUDd=Pc7l<1
+l51
+L12
+Vj<KAL34MbfgjMTKcS@`CD1
+!s100 S687]X5E5]h9aXdQLWODY1
+R6
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
+Efull_adder
+Z20 w1441976872
+R1
+R2
+R3
+Z21 8G:/Altera/15.0/Projects/full_adder.vhd
+Z22 FG:/Altera/15.0/Projects/full_adder.vhd
+l0
+L4
+VeU5IKMzRelJZnz:0JIPbJ2
+!s100 Elg9JMoCB3CdVhnJ?on0`0
+R6
+32
+Z23 !s110 1441976881
+!i10b 1
+Z24 !s108 1441976881.164000
+Z25 !s90 -reportprogress|300|-work|work|G:/Altera/15.0/Projects/full_adder.vhd|
+Z26 !s107 G:/Altera/15.0/Projects/full_adder.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R1
+R2
+DEx4 work 10 full_adder 0 22 eU5IKMzRelJZnz:0JIPbJ2
+l11
+L10
+V`HAgW4A_5=U@kbj2m_hZD2
+!s100 PAJbb`BJNl:Z5aPBL9W0<1
+R6
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R11
+R12
+Emux_2x1
+Z27 w1441979011
+R1
+R2
+R3
+Z28 8G:/Altera/15.0/Projects/mux_2x1.vhd
+Z29 FG:/Altera/15.0/Projects/mux_2x1.vhd
+l0
+L4
+V4?D7i:Q>aGlGBSocJ_dSk3
+!s100 L8a;JaYBTHWO_3AH8cO7@3
+R6
+32
+Z30 !s110 1441979016
+!i10b 1
+Z31 !s108 1441979016.073000
+Z32 !s90 -reportprogress|300|-work|work|G:/Altera/15.0/Projects/mux_2x1.vhd|
+Z33 !s107 G:/Altera/15.0/Projects/mux_2x1.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R1
+R2
+DEx4 work 7 mux_2x1 0 22 4?D7i:Q>aGlGBSocJ_dSk3
+l10
+L9
+VJo5fkANOgHd@h[2_W=JPW0
+!s100 fT]o2mF1JcSBkhjAdDoHY2
+R6
+32
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R11
+R12
+Emux_2x1_businput
+Z34 w1441988273
+R1
+R2
+R3
+Z35 8G:/Altera/15.0/Projects/mux_2x1_busInput.vhd
+Z36 FG:/Altera/15.0/Projects/mux_2x1_busInput.vhd
+l0
+L4
+V<Z9MD=9QP];?RcFMDPLQf1
+!s100 c;W_E2bSK@Rn59Ch91TNS3
+R6
+32
+Z37 !s110 1441988277
+!i10b 1
+Z38 !s108 1441988277.401000
+Z39 !s90 -reportprogress|300|-work|work|G:/Altera/15.0/Projects/mux_2x1_busInput.vhd|
+Z40 !s107 G:/Altera/15.0/Projects/mux_2x1_busInput.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R1
+R2
+DEx4 work 16 mux_2x1_businput 0 22 <Z9MD=9QP];?RcFMDPLQf1
+l12
+L11
+VD?;Gkm9_U3emHcdVhndH]2
+!s100 bNcCH8]D`DeNnWGh4NeX80
+R6
+32
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R11
+R12
+Enand_gate
+Z41 w1441984628
+R1
+R2
+R3
+Z42 8G:/Altera/15.0/Projects/nand_gate_busInput.vhd
+Z43 FG:/Altera/15.0/Projects/nand_gate_busInput.vhd
+l0
+L4
+V4@oHB3`1d]3;o1A?XXCkN3
+!s100 T:]Eh1Xe7UE>AmNVboeUh2
+R6
+32
+Z44 !s110 1441984635
+!i10b 1
+Z45 !s108 1441984635.152000
+Z46 !s90 -reportprogress|300|-work|work|G:/Altera/15.0/Projects/nand_gate_busInput.vhd|
+Z47 !s107 G:/Altera/15.0/Projects/nand_gate_busInput.vhd|
+!i113 1
+R11
+R12
+Abehave
+R1
+R2
+DEx4 work 9 nand_gate 0 22 4@oHB3`1d]3;o1A?XXCkN3
+l12
+L11
+Vk3c2_NOIL=CbRhG4>PO>Q2
+!s100 A<XLN1=OHFHD[Qi7QjnFi2
+R6
+32
+R44
+!i10b 1
+R45
+R46
+R47
+!i113 1
+R11
+R12
+Adataflow
+R1
+R2
+DEx4 work 9 nand_gate 0 22 lIzA4VJPjcA=lDWn68W<@0
+l13
+L12
+VmbHih^H>223OMHkY[SO0l3
+!s100 T>Y7YZ?EL5TXWGiG7nQ790
+R6
+32
+!s110 1441961249
+!i10b 1
+!s108 1441961248.901000
+!s90 -reportprogress|300|-work|work|G:/Altera/15.0/Projects/nand_gate.vhd|
+!s107 G:/Altera/15.0/Projects/nand_gate.vhd|
+!i113 1
+R11
+R12
+w1441961204
+FG:/Altera/15.0/Projects/nand_gate.vhd
+8G:/Altera/15.0/Projects/nand_gate.vhd
+Enand_gate_businput
+Z48 w1441985448
+R1
+R2
+R3
+R42
+R43
+l0
+L4
+VajQjZiHWX5oB6<9CGgRg62
+!s100 014;][J_d2Td_jTNNPU_G1
+R6
+32
+Z49 !s110 1441985459
+!i10b 1
+Z50 !s108 1441985459.069000
+R46
+R47
+!i113 1
+R11
+R12
+Abehave
+R1
+R2
+DEx4 work 18 nand_gate_businput 0 22 ajQjZiHWX5oB6<9CGgRg62
+l12
+L11
+V==4M3PJM:n20mVzH<nk`52
+!s100 aD8OR[_1O[z6BOkQ3OJlz1
+R6
+32
+R49
+!i10b 1
+R50
+R46
+R47
+!i113 1
+R11
+R12
+Enor_gate
+Z51 w1441976900
+R1
+R2
+R3
+Z52 8G:/Altera/15.0/Projects/nor_gate.vhd
+Z53 FG:/Altera/15.0/Projects/nor_gate.vhd
+l0
+L4
+VeKmVBQIGmX@mz7cl5cRia2
+!s100 =a>28F21=GRcg<nU0zz]m3
+R6
+32
+Z54 !s110 1441976908
+!i10b 1
+Z55 !s108 1441976908.080000
+Z56 !s90 -reportprogress|300|-work|work|G:/Altera/15.0/Projects/nor_gate.vhd|
+Z57 !s107 G:/Altera/15.0/Projects/nor_gate.vhd|
+!i113 1
+R11
+R12
+Abehave
+R1
+R2
+DEx4 work 8 nor_gate 0 22 eKmVBQIGmX@mz7cl5cRia2
+l11
+L10
+V<eWKP9kNIXKEj8]V07EAk3
+!s100 9[OhaTS73LUZ[_A9lIg_U0
+R6
+32
+R54
+!i10b 1
+R55
+R56
+R57
+!i113 1
+R11
+R12
+Enor_gate_businput
+Z58 w1441985709
+R1
+R2
+R3
+Z59 8G:/Altera/15.0/Projects/nor_gate_busInput.vhd
+Z60 FG:/Altera/15.0/Projects/nor_gate_busInput.vhd
+l0
+L4
+VoU9=>^QfJidFYbHGDghJ]1
+!s100 EggVS:PcRkBgQ_jngIPe22
+R6
+32
+!s110 1441985729
+!i10b 1
+Z61 !s108 1441985729.970000
+Z62 !s90 -reportprogress|300|-work|work|G:/Altera/15.0/Projects/nor_gate_busInput.vhd|
+Z63 !s107 G:/Altera/15.0/Projects/nor_gate_busInput.vhd|
+!i113 1
+R11
+R12
+Abehave
+R1
+R2
+DEx4 work 17 nor_gate_businput 0 22 oU9=>^QfJidFYbHGDghJ]1
+l12
+L11
+VKYQQII>?e?1Pc0f@8O7^40
+!s100 zRzVZ@bY:@JNmk5;8QW;63
+R6
+32
+!s110 1441985730
+!i10b 1
+R61
+R62
+R63
+!i113 1
+R11
+R12
+Etb_add_subb
+Z64 w1441978248
+R1
+R2
+R3
+Z65 8G:/Altera/15.0/Projects/tb_adder_subtractor_generic.vhd
+Z66 FG:/Altera/15.0/Projects/tb_adder_subtractor_generic.vhd
+l0
+L5
+VFS46X;gXdJEabeMeOjJ972
+!s100 L8NXYjMl>CVh?BUlea5dE0
+R6
+32
+Z67 !s110 1441978256
+!i10b 1
+Z68 !s108 1441978256.375000
+Z69 !s90 -reportprogress|300|-work|work|G:/Altera/15.0/Projects/tb_adder_subtractor_generic.vhd|
+Z70 !s107 G:/Altera/15.0/Projects/tb_adder_subtractor_generic.vhd|
+!i113 1
+R11
+R12
+Atest
+R1
+R2
+DEx4 work 11 tb_add_subb 0 22 FS46X;gXdJEabeMeOjJ972
+l20
+L7
+VOdOG5V0ada00?BDC8o@8I1
+!s100 OD4:ZPYWP<7aElOBQQJdi2
+R6
+32
+R67
+!i10b 1
+R68
+R69
+R70
+!i113 1
+R11
+R12
+Etb_full_adder
+Z71 w1441977205
+R1
+R2
+R3
+Z72 8G:/Altera/15.0/Projects/tb_full_adder.vhd
+Z73 FG:/Altera/15.0/Projects/tb_full_adder.vhd
+l0
+L4
+V7TXXDMFBo9MIk[Z[PGaKo3
+!s100 N[mdLgV@iDf_9ml;_ceLn2
+R6
+32
+Z74 !s110 1441977219
+!i10b 1
+Z75 !s108 1441977219.801000
+Z76 !s90 -reportprogress|300|-work|work|G:/Altera/15.0/Projects/tb_full_adder.vhd|
+Z77 !s107 G:/Altera/15.0/Projects/tb_full_adder.vhd|
+!i113 1
+R11
+R12
+Atest
+R1
+R2
+DEx4 work 13 tb_full_adder 0 22 7TXXDMFBo9MIk[Z[PGaKo3
+l14
+L6
+VaVjlYg281UU8UBL:RgZln2
+!s100 D1oGW4HQZC1KKLDQna<9f1
+R6
+32
+R74
+!i10b 1
+R75
+R76
+R77
+!i113 1
+R11
+R12
+Etb_mux_2x1
+Z78 w1441979735
+R1
+R2
+R3
+Z79 8G:/Altera/15.0/Projects/tb_mux_2x1.vhd
+Z80 FG:/Altera/15.0/Projects/tb_mux_2x1.vhd
+l0
+L4
+Vm:1QCTL1M?]6gDYNJ7TC01
+!s100 c?j>enIA4z26DeMAnR_f]2
+R6
+32
+Z81 !s110 1441979738
+!i10b 1
+Z82 !s108 1441979738.855000
+Z83 !s90 -reportprogress|300|-work|work|G:/Altera/15.0/Projects/tb_mux_2x1.vhd|
+Z84 !s107 G:/Altera/15.0/Projects/tb_mux_2x1.vhd|
+!i113 1
+R11
+R12
+Atest
+R1
+R2
+DEx4 work 10 tb_mux_2x1 0 22 m:1QCTL1M?]6gDYNJ7TC01
+l15
+L6
+VAHJP4S6NzB;<cSEc=o4U60
+!s100 ID9=jzXbAICQj2SnOlFBI0
+R6
+32
+R81
+!i10b 1
+R82
+R83
+R84
+!i113 1
+R11
+R12
+Etb_mux_2x1_businput
+Z85 w1441982289
+R1
+R2
+R3
+Z86 8G:/Altera/15.0/Projects/tb_mux_2x1_busInput.vhd
+Z87 FG:/Altera/15.0/Projects/tb_mux_2x1_busInput.vhd
+l0
+L4
+VO[fWV@OZXJF79iFR<knV50
+!s100 5cMkcmFm6SfH:]Un<0J`E0
+R6
+32
+Z88 !s110 1441985395
+!i10b 1
+Z89 !s108 1441985395.951000
+Z90 !s90 -reportprogress|300|-work|work|G:/Altera/15.0/Projects/tb_mux_2x1_busInput.vhd|
+Z91 !s107 G:/Altera/15.0/Projects/tb_mux_2x1_busInput.vhd|
+!i113 1
+R11
+R12
+Atest
+R1
+R2
+DEx4 work 19 tb_mux_2x1_businput 0 22 O[fWV@OZXJF79iFR<knV50
+l19
+L6
+V=OJB?:43Sg5Aa;FLW0Z=P3
+!s100 d7IRY=LJ_jciPBcId3Vjk3
+R6
+32
+R88
+!i10b 1
+R89
+R90
+R91
+!i113 1
+R11
+R12
+Etb_nand_gate
+Z92 w1441976902
+R1
+R2
+R3
+Z93 8G:/Altera/15.0/Projects/tb_nand_gate.vhd
+Z94 FG:/Altera/15.0/Projects/tb_nand_gate.vhd
+l0
+L4
+VQzg>Gf1c;F@`8fkA9<4Y71
+!s100 Lzb5^WQJW`oL^Cil<bfHL0
+R6
+32
+Z95 !s110 1441976909
+!i10b 1
+Z96 !s108 1441976909.421000
+Z97 !s90 -reportprogress|300|-work|work|G:/Altera/15.0/Projects/tb_nand_gate.vhd|
+Z98 !s107 G:/Altera/15.0/Projects/tb_nand_gate.vhd|
+!i113 1
+R11
+R12
+Atest
+R1
+R2
+DEx4 work 12 tb_nand_gate 0 22 Qzg>Gf1c;F@`8fkA9<4Y71
+l15
+L6
+VG[dbfX=OGScnEfEDnj5F_0
+!s100 A:kajnR`DkL7OhC[3L]W<3
+R6
+32
+R95
+!i10b 1
+R96
+R97
+R98
+!i113 1
+R11
+R12
+Etb_nand_gate_businput
+Z99 w1441985373
+R1
+R2
+R3
+Z100 8G:/Altera/15.0/Projects/tb_nand_gate_busInput.vhd
+Z101 FG:/Altera/15.0/Projects/tb_nand_gate_busInput.vhd
+l0
+L4
+VcJGb6TS]eNWmTYSLX52EV2
+!s100 M]:7dmlN`kPlUJVWDVN392
+R6
+32
+Z102 !s110 1441985454
+!i10b 1
+Z103 !s108 1441985454.939000
+Z104 !s90 -reportprogress|300|-work|work|G:/Altera/15.0/Projects/tb_nand_gate_busInput.vhd|
+Z105 !s107 G:/Altera/15.0/Projects/tb_nand_gate_busInput.vhd|
+!i113 1
+R11
+R12
+Atest
+R1
+R2
+DEx4 work 21 tb_nand_gate_businput 0 22 cJGb6TS]eNWmTYSLX52EV2
+l18
+L6
+VO>E5in1l<im63OHIVol@81
+!s100 NB0nfGcoHn]H8>d=b8?B40
+R6
+32
+R102
+!i10b 1
+R103
+R104
+R105
+!i113 1
+R11
+R12
+Etb_nor_gate
+Z106 w1441976898
+R1
+R2
+R3
+Z107 8G:/Altera/15.0/Projects/tb_nor_gate.vhd
+Z108 FG:/Altera/15.0/Projects/tb_nor_gate.vhd
+l0
+L4
+VMR;I2FYlVM0=hVMPVdZZc0
+!s100 zGe9d:C?U2]zFFB<5M0?d3
+R6
+32
+Z109 !s110 1441976910
+!i10b 1
+Z110 !s108 1441976910.901000
+Z111 !s90 -reportprogress|300|-work|work|G:/Altera/15.0/Projects/tb_nor_gate.vhd|
+Z112 !s107 G:/Altera/15.0/Projects/tb_nor_gate.vhd|
+!i113 1
+R11
+R12
+Atest
+R1
+R2
+DEx4 work 11 tb_nor_gate 0 22 MR;I2FYlVM0=hVMPVdZZc0
+l15
+L6
+VMEnR[6ZXcTTfSVfo7M<iC0
+!s100 OBI=>j84Kl;V7c22RWU5`3
+R6
+32
+R109
+!i10b 1
+R110
+R111
+R112
+!i113 1
+R11
+R12
+Etb_nor_gate_businput
+Z113 w1441985852
+R1
+R2
+R3
+Z114 8G:/Altera/15.0/Projects/tb_nor_gate_busInput.vhd
+Z115 FG:/Altera/15.0/Projects/tb_nor_gate_busInput.vhd
+l0
+L4
+VMg:WAC1<i]:J]9fQbm?KT2
+!s100 [Ck^Io:_e0L7IHWc>PfBf3
+R6
+32
+Z116 !s110 1441985864
+!i10b 1
+Z117 !s108 1441985864.558000
+Z118 !s90 -reportprogress|300|-work|work|G:/Altera/15.0/Projects/tb_nor_gate_busInput.vhd|
+Z119 !s107 G:/Altera/15.0/Projects/tb_nor_gate_busInput.vhd|
+!i113 1
+R11
+R12
+Atest
+R1
+R2
+DEx4 work 20 tb_nor_gate_businput 0 22 Mg:WAC1<i]:J]9fQbm?KT2
+l18
+L6
+VUo=^<7gibVO=cIaXiY<KH2
+!s100 Of19[B=ea[GzNTBZQ<AYj3
+R6
+32
+R116
+!i10b 1
+R117
+R118
+R119
+!i113 1
+R11
+R12
+Etest
+Z120 w1441996830
+Z121 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+Z122 8G:/Altera/15.0/Projects/tb_alu.vhd
+Z123 FG:/Altera/15.0/Projects/tb_alu.vhd
+l0
+L6
+VkkJ^lNM9jD[PcDlzabLmc2
+!s100 k;F[X<h09USRl>:KJJ5e>0
+R6
+32
+Z124 !s110 1441996833
+!i10b 1
+Z125 !s108 1441996833.427000
+Z126 !s90 -reportprogress|300|-work|work|G:/Altera/15.0/Projects/tb_alu.vhd|
+Z127 !s107 G:/Altera/15.0/Projects/tb_alu.vhd|
+!i113 1
+R11
+R12
+Aalutest
+R121
+R1
+R2
+DEx4 work 4 test 0 22 kkJ^lNM9jD[PcDlzabLmc2
+l51
+L7
+VZ^jf;HPBZfl]Ma5coD4]Y3
+!s100 Q8JkSR=QBT?dbV<0K5SNI2
+R6
+32
+R124
+!i10b 1
+R125
+R126
+R127
+!i113 1
+R11
+R12

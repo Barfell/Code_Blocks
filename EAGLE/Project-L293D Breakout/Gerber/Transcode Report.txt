@@ -1,0 +1,37 @@
+
+
+   ---- Transcoding 'G:\EAGLE\projects\Project-L293D Breakout\Gerber\l293d_brkout.GBS' ----   Thu Aug 06 14:10:10 2015
+
+D10   --> D100
+D12   --> D101
+D13   --> D102
+D14   --> D103
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'G:\EAGLE\projects\Project-L293D Breakout\Gerber\l293d_brkout.GTL' ----   Thu Aug 06 14:10:10 2015
+
+D10   --> D104
+D11   --> D105
+D12   --> D106
+D13   --> D107
+D14   --> D108
+D15   --> D109
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'G:\EAGLE\projects\Project-L293D Breakout\Gerber\l293d_brkout.GTO' ----   Thu Aug 06 14:10:10 2015
+
+D10   --> D110
+D11   --> D111
+D12   --> D112
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'G:\EAGLE\projects\Project-L293D Breakout\Gerber\l293d_brkout.GTS' ----   Thu Aug 06 14:10:10 2015
+
+D10   --> D113
+D12   --> D114
+D13   --> D115
+D14   --> D116
+-----------------------------------------------------------------

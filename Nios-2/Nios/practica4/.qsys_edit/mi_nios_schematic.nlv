@@ -1,0 +1,27 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst mi_nios.timer -pg 1 -lvl 2 -y 290
+preplace inst mi_nios.SW -pg 1 -lvl 2 -y 720
+preplace inst mi_nios.sysid -pg 1 -lvl 2 -y 510
+preplace inst mi_nios.cpu -pg 1 -lvl 1 -y 30
+preplace inst mi_nios.LED -pg 1 -lvl 2 -y 400
+preplace inst mi_nios.sdram -pg 1 -lvl 2 -y 600
+preplace inst mi_nios.jtag -pg 1 -lvl 2 -y 180
+preplace inst mi_nios.flash -pg 1 -lvl 2 -y 50
+preplace inst mi_nios.clk_50 -pg 1 -lvl 1 -y 760
+preplace inst mi_nios -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst mi_nios.pll -pg 1 -lvl 2 -y 830
+preplace netloc EXPORT<net_container>mi_nios</net_container>(SLAVE)mi_nios.sdram,(SLAVE)sdram.wire) 1 0 2 NJ 670 NJ
+preplace netloc EXPORT<net_container>mi_nios</net_container>(SLAVE)SW.external_connection,(SLAVE)mi_nios.sw) 1 0 2 NJ 750 NJ
+preplace netloc EXPORT<net_container>mi_nios</net_container>(SLAVE)mi_nios.flash,(SLAVE)flash.external) 1 0 2 NJ 200 NJ
+preplace netloc INTERCONNECT<net_container>mi_nios</net_container>(SLAVE)sdram.reset,(SLAVE)sysid.reset,(SLAVE)LED.reset,(SLAVE)jtag.reset,(SLAVE)SW.reset,(SLAVE)timer.reset,(SLAVE)cpu.reset_n,(SLAVE)flash.reset,(MASTER)cpu.jtag_debug_module_reset,(MASTER)clk_50.clk_reset,(SLAVE)pll.inclk_interface_reset) 1 0 2 120 220 370
+preplace netloc EXPORT<net_container>mi_nios</net_container>(SLAVE)mi_nios.led,(SLAVE)LED.external_connection) 1 0 2 NJ 430 NJ
+preplace netloc FAN_OUT<net_container>mi_nios</net_container>(SLAVE)sdram.clk,(SLAVE)cpu.clk,(MASTER)pll.c0,(SLAVE)flash.clk,(SLAVE)sysid.clk) 1 0 3 80 160 450 710 690
+preplace netloc EXPORT<net_container>mi_nios</net_container>(SLAVE)mi_nios.clk,(SLAVE)clk_50.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>mi_nios</net_container>(MASTER)mi_nios.sdram_clk,(MASTER)pll.c1) 1 2 1 N
+preplace netloc FAN_OUT<net_container>mi_nios</net_container>(SLAVE)jtag.irq,(MASTER)cpu.d_irq,(SLAVE)flash.irq,(SLAVE)timer.irq) 1 1 1 430
+preplace netloc FAN_OUT<net_container>mi_nios</net_container>(SLAVE)jtag.clk,(MASTER)clk_50.clk,(SLAVE)SW.clk,(SLAVE)LED.clk,(SLAVE)timer.clk,(SLAVE)pll.inclk_interface) 1 1 1 470
+preplace netloc INTERCONNECT<net_container>mi_nios</net_container>(SLAVE)sdram.s1,(SLAVE)flash.epcs_control_port,(SLAVE)timer.s1,(SLAVE)LED.s1,(SLAVE)SW.s1,(MASTER)cpu.instruction_master,(MASTER)cpu.data_master,(SLAVE)sysid.control_slave,(SLAVE)cpu.jtag_debug_module,(SLAVE)jtag.avalon_jtag_slave) 1 0 2 100 180 390
+preplace netloc EXPORT<net_container>mi_nios</net_container>(SLAVE)mi_nios.reset,(SLAVE)clk_50.clk_in_reset) 1 0 1 NJ
+levelinfo -pg 1 0 50 800
+levelinfo -hier mi_nios 60 150 500 710

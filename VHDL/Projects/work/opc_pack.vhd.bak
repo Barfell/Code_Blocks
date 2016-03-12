@@ -1,0 +1,83 @@
+PACKAGE opc_pack IS
+TYPE opc5 IS ('X',                     -- Forcing  Unknown
+                '0',             -- Forcing  0
+                '1',             -- Forcing  1
+                'Z',             -- High Impedance    
+                'H'              -- Weak     1       
+               );
+
+TYPE opc5_vector IS ARRAY (NATURAL RANGE <>) OF opc5;
+TYPE opc_table IS ARRAY (opc5, opc5) OF opc5;
+TYPE opc5_1d IS ARRAY (opc5) OF opc5;
+FUNCTION RESOLVED (s : opc5_vector) RETURN opc5;
+FUNCTION "xor" (l : opc5; r : opc5) RETURN opc5;
+FUNCTION "xnor" (l : opc5; r : opc5) RETURN opc5;
+FUNCTION "not"  (l : opc5) return opc5;
+
+SUBTYPE opc IS resolved opc5;
+--SUBTYPE opc_vector IS resolved opc5_vector;
+
+CONSTANT resolution_table : opc_table := (
+--      ---------------------------------------------------------
+-- |  X    0    1    Z    H
+--      ---------------------------------------------------------
+    ('X', 'X', 'X', 'X', 'X'),  -- | X |
+    ('X', '0', 'X', '0', '0'),  -- | 0 |
+    ('X', 'X', '1', '1', '1'),  -- | 1 |
+    ('X', '0', '1', 'Z', 'H'),  -- | Z |
+    ('X', '0', '1', 'H', 'H')   -- | H |
+    );
+
+CONSTANT xor_table : opc_table := (
+--      ---------------------------------------------------------
+-- |  X    0    1    Z    H
+--      ---------------------------------------------------------
+    ('X', 'X', 'X', 'X', 'X'),  -- | X |
+    ('X', '0', '1', 'X', '1'),  -- | 0 |
+    ('X', '1', '0', 'X', '0'),  -- | 1 |
+    ('X', 'X', 'X', 'X', 'X'),  -- | Z |
+    ('X', '1', '0', 'X', '0')   -- | H |
+    );
+
+CONSTANT not_table : opc5_1d :=
+    --  -------------------------------------------------
+    --  |   X    0    1    Z    H   |
+    --  -------------------------------------------------
+          ('X', '1', '0', 'X', '0');
+END PACKAGE opc_pack;
+
+PACKAGE BODY opc_pack is
+  FUNCTION RESOLVED (s : opc5_vector) RETURN opc5 IS
+    VARIABLE result : opc5 := 'Z';  -- weakest state default
+  BEGIN
+    -- the test for a single driver is essential otherwise the
+    -- loop would return 'X' for a single driver of '-' and that
+    -- would conflict with the value of a single driver unresolved
+    -- signal.
+    IF (s'LENGTH = 1) THEN RETURN s(s'LOW);
+    ELSE
+      FOR i IN s'RANGE LOOP
+        result := resolution_table(result, s(i));
+      END LOOP;
+    END IF;
+    RETURN result;
+  END FUNCTION resolved;
+
+  FUNCTION "xor" (l : opc5; r : opc5) RETURN opc5 IS
+  BEGIN
+    RETURN (xor_table(l, r));
+  END FUNCTION "xor";
+
+ FUNCTION "not" (l : opc5) RETURN opc5 IS
+ BEGIN
+    RETURN (not_table(l));
+  END FUNCTION "not";
+
+FUNCTION "xnor" (l : opc5; r : opc5) RETURN opc5 IS
+VARIABLE result: opc5;
+  BEGIN
+    result<=xor_table(l, r);
+    result<=not_table(result);
+    RETURN result;
+  END FUNCTION "xnor";
+ END opc_pack;

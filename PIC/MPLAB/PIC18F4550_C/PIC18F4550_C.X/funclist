@@ -1,0 +1,16 @@
+_sys_init: CODE, 646 0 74
+_relay_control: CODE, 16 0 374
+_nrf24_init: CODE, 494 0 76
+_main: CODE, 988 0 4294966954
+_SPI_master_write: CODE, 888 0 20
+_Delay_ms: CODE, 776 0 56
+i2_Delay_ms: CODE, 720 0 56
+_isr: CODE, 8 0 980
+_SPI_master_read: CODE, 946 0 16
+_SPI_master_init: CODE, 570 0 76
+_interrupt_init: CODE, 962 0 14
+i2_nrf24_write: CODE, 860 0 28
+_nrf24_write: CODE, 832 0 28
+_nrf24_data_rx: CODE, 390 0 90
+i2_SPI_master_write: CODE, 908 0 20
+Total: 1566

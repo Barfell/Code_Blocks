@@ -1,0 +1,31 @@
+-- A-B=A+B'+1
+--include standard logic library from IEEE
+library ieee;
+use ieee.std_logic_1164.all;
+
+--define entity for adder-subtractor
+entity add_subb is
+    GENERIC(size: integer);
+    port(a, b: in std_logic_vector(size-1 downto 0);  --std_logic_vector defines array of 8 elements with indexed from 0 to 7; can use bit_vector as well
+        add_sub: in std_logic;
+        cout: out std_logic;
+        sum: out std_logic_vector(size-1 downto 0));
+end add_subb;
+
+--define architecture for adder-subtractor
+architecture structural of add_subb is
+    component full_adder                             --use a single full adder to build a bigger 8-bit adder-subtractor
+        port(a, b, carry_in: in std_logic;
+            carry_out, sum: out std_logic);
+    end component;
+    signal carry: std_logic_vector(size downto 0);       --for connecting carry-out pins internally among adders
+    signal b_bar: std_logic_vector(size-1 downto 0);
+    begin
+        carry(0)<=add_sub;
+        cout<=add_sub xor carry(size);
+        G0: for i in size-1 downto 0 generate        --create the complete circuit
+                b_bar(i)<=b(i) xor carry(0);
+                adder_subtractor_array: full_adder 
+                port map(a=>a(i), b=>b_bar(i), carry_in=>carry(i), carry_out=>carry(i+1), sum=>sum(i));
+        end generate G0;
+end structural;

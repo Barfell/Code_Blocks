@@ -1,0 +1,36 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+
+ENTITY test IS END test;
+ARCHITECTURE testDbit OF test IS
+COMPONENT d_latch
+PORT (
+d, clk:IN std_logic;
+q:OUT std_logic);
+END COMPONENT;
+COMPONENT d_ff
+PORT (
+d, clk:IN std_logic;
+q:OUT std_logic);
+END COMPONENT;
+SIGNAL test,clk,qLatch,qFlop:std_logic:='0';
+BEGIN
+test<='0',
+'1' AFTER 15 ns,
+'0' AFTER 65 ns,
+'1' AFTER 70 ns,
+'0' AFTER 75 ns,
+'1' AFTER 125 ns;
+U1:d_latch PORT MAP(test, clk,qLatch);
+U2:d_ff PORT MAP(test, clk,qFlop);
+clk<='0',
+'1' AFTER 20 NS,
+'0' AFTER 40 NS,
+'1' AFTER 60 ns,
+'0' AFTER 80 ns,
+'1' AFTER 100 ns,
+'0' AFTER 120 ns;
+-- This assignment can also be used but then you cannot type
+-- run -all in the simulation
+-- clk <= not(clk) after 20 ns;
+END testDbit;
