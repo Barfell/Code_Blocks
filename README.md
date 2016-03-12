@@ -22,7 +22,7 @@ Contains example code and projects for various platforms (mainly embedded).
     git push origin
     ```
     
-    - you now have a local copy with two remotes: `origin` is the remote to your private repository where you will commit your changes to; `public` is the remote to the original repository where you get all the updates from.
+    You now have a local copy with two remotes: `origin` is the remote to your private repository where you will commit your changes to; `public` is the remote to the original repository where you get all the updates from.
 
 4. Make sure you are [watching](https://help.github.com/enterprise/2.3/user/articles/be-social/) the public repository, so that you are notified in the GitHub news feed whenever a change has been made. In case this occurs, you must [merge](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) all the public changes into your local work flow, e.g.:
 
@@ -57,3 +57,4 @@ Any bug, feature or problem can be managed within a lab group using [the issue t
 If you identify a problem of general interest or related to the provided material you can open an issue on the main (public) repository, which will be visible to all developers. Please take your time and be mindful of what you post in the public domain since it is _really important_ that the issue is correct, concise, and is accompanied by a short description of context in which the issue arose. [Here](https://wiredcraft.com/blog/how-we-write-our-github-issues/) and [here](https://upthemes.com/blog/2014/02/writing-useful-github-issues/) are two discussions in how to write meaningful issues. An issue can be confirmed or invalidated, depending on whether or not it is reproducible.
 
 If you know how to solve an opened issue and would like to contribute to the development of the software, feel free to [fork](https://help.github.com/enterprise/2.4/user/articles/fork-a-repo/) the main repository and [issue a pull request](https://help.github.com/articles/using-pull-requests/) when you believe you have solved the problem. The solution will be evaluated and if valid, will be merged into the `master` branch.
+
