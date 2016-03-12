@@ -1,4 +1,4 @@
-# Code_Blocks
+# Code Blocks
 Code Blocks &amp; Examples for Projects
 
 Contains example code and projects for various platforms (mainly embedded).

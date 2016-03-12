@@ -13,7 +13,7 @@ Contains example code and projects for various platforms (mainly embedded).
     git clone <your_repository_url>
     ```
   
-3. Add a remote to the main (public) repository](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes). Assuming that you have set up SSH authentication:
+3. Add a remote to the main (public) repository (https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes). Assuming that you have set up SSH authentication:
 
     ```
     cd <path/to/your/repository_clone>
