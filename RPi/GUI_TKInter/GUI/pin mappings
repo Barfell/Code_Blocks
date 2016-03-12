@@ -1,0 +1,11 @@
+
+GUI checkboxes to raspberry pi pin mappings as per BCM cofiguration
+
+ap_1 = 4
+ap_2 = 17
+ap_3 = 27
+ap_4 = 22
+ap_5 = 10
+ap_6 = 9
+ap_7 = 11
+ap_8 = 5

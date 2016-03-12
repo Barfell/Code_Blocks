@@ -1,0 +1,20 @@
+import RPI.GPIO as GPIO
+import time
+
+# Refer to pins as board layout or BCM
+GPIO.setmode(GPIO.BCM/BOARD)
+
+#Set direction of the pin
+GPIO.setup(25, GPIO.OUT)
+
+#set the pin as high
+GPIO.output(25, GPIO.HIGH)
+
+#turn off the led
+GPO.ouput(25, GPIO.LOW)
+
+#delay
+time.sleep(1)
+
+# to read a pin
+input_Value = GPIO.input(24)

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <head>
+        <title>Pi GPIO Output Test</title>             <!--display title string received from Python program-->
+    </head>
+    
+    <body>
+        <h1>Pi Prime Device Listing & Status</h1>
+        
+        <!--parse through pin dictionary received from Python program and display state of all the output pins-->
+        {% for pin in pins %}
+        <p> {{ pins[pin].name }}                         <!--display name of pin-->
+        {% if pins[pin].state == true %}
+            Is Currently ON (<a href="/{{ pin }}/off">Turn OFF</a>)        <!--display status of pin, if pin is on, provide a URL to turn it off-->
+        {% else %}
+            Is Currently OFF (<a href="/{{ pin }}/on">Turn ON</a>)        <!--display status of pin, if pin is off, provide a URL to turn it on-->
+        {% endif %}
+        </p>
+        {% endfor %}
+        
+    </body>
+</html>
