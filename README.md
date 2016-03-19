@@ -17,17 +17,17 @@ Contains example code and projects for various platforms (mainly embedded).
 
     ```
     cd <path/to/your/repository_clone>
-    git remote add public <your_repository_url>
-    git pull public master
+    git remote add <remote_name> <your_repository_url>
+    git pull <remote_name> master
     git push origin
     ```
     
-    You now have a local copy with two remotes: `origin` is the remote to your private repository where you will commit your changes to; `public` is the remote to the original repository where you get all the updates from.
+    You now have a local copy with two remotes: `origin` is the remote to your private repository where you will commit your changes to; <remote_name> is the remote to the original repository where you get all the updates from.
 
 4. Make sure you are [watching](https://help.github.com/enterprise/2.3/user/articles/be-social/) the public repository, so that you are notified in the GitHub news feed whenever a change has been made. In case this occurs, you must [merge](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) all the public changes into your local work flow, e.g.:
 
     ```
-    git pull public master
+    git pull <remote_name> master
     ```
     
     It might be so that you need to manually manage conflicts in case the automatic merge fails. Refer to the provided documentation on methods and tools for merging code. Take your time in the beginning until you understand how to properly integrate new code, and make sure you test your project after each merge. In case a serious mistake mistake is done, you can always revert to the HEAD or earlier revisions.
