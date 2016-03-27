@@ -7,9 +7,9 @@ else
 	KERNELDIR ?= /lib/modules/$(shell uname -r)/build
 	PWD := $(shell pwd)
     
-all:
+default:
 	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
-endif
 
 clean:
 	$(MAKE) -C $(KERNELDIR) M=$(PWD) clean
+endif
