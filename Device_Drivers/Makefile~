@@ -1,7 +1,0 @@
-obj-m := Hello_World.o
-
-all:
-	make -C /usr/src/linux-source-4.2.0 M=`pwd` modules
-
-clean:
-	make -C /usr/src/linux-source-4.2.0 M=`pwd` clean
