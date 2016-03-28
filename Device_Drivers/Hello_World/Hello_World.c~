@@ -22,4 +22,3 @@ module_exit(hello_exit);                            //indicate to kernel that he
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("UDAYAN PRABIR SINHA");
 MODULE_DESCRIPTION("Hello World Module");
-MODULE_VERSION("V1.1");
