@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<fcntl.h>     //for file operations
+
+
+int main(void)
+{
+	char buffer[1]={0};
+	int fd=open("/dev/char_tmp", O_RDWR);        //open file handle with both read & write permissions
+	
+	write(fd, buffer, 1, NULL);               //write to file
+	read(fd, buffer, 1, NULL);				  //read from file
+	
+	printf("Value: %d\n" , buffer[0]);        //display value of file
+	
+	close(fd);                                //close file handle
+	return 0;
+}

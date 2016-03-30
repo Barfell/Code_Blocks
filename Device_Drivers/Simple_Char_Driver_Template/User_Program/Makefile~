@@ -1,0 +1,2 @@
+all:
+	gcc -o user_prog user_prog.c
