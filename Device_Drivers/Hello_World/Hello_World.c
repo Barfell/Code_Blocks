@@ -1,6 +1,7 @@
 //required header files
-#include<linux/init.h>
-#include<linux/module.h>
+#include<linux/kernel.h>    //for printk()
+#include<linux/init.h>      //for init and exit functions
+#include<linux/module.h>    //for MODULE_ functions
 
 //module initialization function
 static int __init hello_init(void)         //static usage is optional
