@@ -3,7 +3,7 @@
 1) create a char device
 mknod -m 0666 /dev/mem_chr c 60 0
 
-#creates a char device named char_tmp with major number=60 & minor number=0
+#creates a char device named mem_chr with major number=60 & minor number=0
 
 2) load module
 insmod ./Mem_Char.ko
@@ -13,6 +13,13 @@ lsmod
 
 4) run user program
 ./user_prog
+
+#Instead of the userspace program, data can also be written/read using the shell directly.
+#To write data:
+echo -n "ABCDE" > /dev/mem_chr 
+
+#To read data:
+cat /dev/mem_chr   
 
 5) finally remove module
 rmmod Mem_Char
