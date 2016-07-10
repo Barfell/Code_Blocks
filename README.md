@@ -13,32 +13,13 @@ Contains example code and projects for various platforms (mainly embedded).
     git clone <your_repository_url>
     ```
   
-3. Add a remote to the main (public) repository (https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes). Assuming that you have set up SSH authentication:
-
-    ```
-    cd <path/to/your/repository_clone>
-    git remote add <remote_name> <your_repository_url>
-    git pull <remote_name> master
-    git push origin
-    ```
-    
-    You now have a local copy with two remotes: `origin` is the remote to your private repository where you will commit your changes to; <remote_name> is the remote to the original repository where you get all the updates from.
-
-4. Make sure you are [watching](https://help.github.com/enterprise/2.3/user/articles/be-social/) the public repository, so that you are notified in the GitHub news feed whenever a change has been made. In case this occurs, you must [merge](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) all the public changes into your local work flow, e.g.:
-
-    ```
-    git pull <remote_name> master
-    ```
-    
-    It might be so that you need to manually manage conflicts in case the automatic merge fails. Refer to the provided documentation on methods and tools for merging code. Take your time in the beginning until you understand how to properly integrate new code, and make sure you test your project after each merge. In case a serious mistake mistake is done, you can always revert to the HEAD or earlier revisions.
-
 
 ## Work flow
 
 1. Start playing with your git tools as soon as possible. Here is a [cheat sheet](https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf) with the most important commands. The basic commands for committing your changes are:
     ```
     git add <file_or_folder> # git add -A in case there are new unversioned files
-    git commit -p 
+    git commit -m "commit message" 
     git push origin <your_branch> 
     ```
 
