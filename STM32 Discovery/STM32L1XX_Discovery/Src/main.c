@@ -95,37 +95,28 @@ int main(void)
 //  MX_RTC_Init();
 //  MX_SPI2_Init();
 //  MX_SPI3_Init();
-  MX_TIM3_Init();
+//  MX_TIM3_Init();
 //  MX_USART1_UART_Init();
 //  MX_USART2_UART_Init();
-//  MX_TIM10_Init();
+  MX_TIM10_Init();
 
   /* USER CODE BEGIN 2 */
-  HAL_GPIO_WritePin(GPIOC, LD3_Pin, GPIO_PIN_SET);             //system ready LED
+  HAL_GPIO_WritePin(GPIOC, LD3_Pin, GPIO_PIN_SET);         //system ready LED
 
-  HAL_TIM_Base_Start(&htim3);            //start timer
+  HAL_TIM_PWM_Start(&htim10, TIM_CHANNEL_1);		//start timer 3 PWM on channel 1
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    count=__HAL_TIM_GET_COUNTER(&htim3);         //get count
-  	//PWM control LD4
-  	if(count<100)
-  	{
-  	  HAL_GPIO_WritePin(GPIOC, LD4_Pin, GPIO_PIN_SET);
-  	}
-  	else
-  	{
-  	  HAL_GPIO_WritePin(GPIOC, LD4_Pin, GPIO_PIN_RESET);
-  	}
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	HAL_GPIO_TogglePin(GPIOC, LD4_Pin);       //toggle LD4
+	delay_ms(500);
   }
-    /* USER CODE END 3 */
+  /* USER CODE END 3 */
 }
 
 /** System Clock Configuration
@@ -190,16 +181,9 @@ void delay_ms(unsigned long x)
   {
 	for(j=0; j<2500; j++)
 	{
-	   asm("NOP");
+	  asm("NOP");
 	}
   }
-}
-
-//timer period elapsed callback (called by HAL_TIM_IRQHandler())
-//add user code for interrupt routine here
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-{
-  HAL_GPIO_TogglePin(GPIOC, LD4_Pin);       //toggle LD4
 }
 /* USER CODE END 4 */
 
