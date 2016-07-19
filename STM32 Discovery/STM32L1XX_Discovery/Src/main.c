@@ -72,7 +72,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+  int count;
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -102,27 +102,30 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
   HAL_GPIO_WritePin(GPIOC, LD3_Pin, GPIO_PIN_SET);             //system ready LED
-  HAL_TIM_Base_Start_IT(&htim3);            				   //start timer 3 with interrupt
 
-  //refer relevant CMSIS device file in Drivers folder to know which IRQn (interrupt number) to use
-  HAL_NVIC_SetPriority(TIM3_IRQn, 1, 0);   					   //set timer 3 interrupt preempt priority 1
-  HAL_NVIC_EnableIRQ(TIM3_IRQn);      						   //enable timer 3 interrupt
-
+  HAL_TIM_Base_Start(&htim3);            //start timer
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	HAL_GPIO_TogglePin(GPIOC, LD3_Pin);
-	delay_ms(250);
+    count=__HAL_TIM_GET_COUNTER(&htim3);         //get count
+  	//PWM control LD4
+  	if(count<100)
+  	{
+  	  HAL_GPIO_WritePin(GPIOC, LD4_Pin, GPIO_PIN_SET);
+  	}
+  	else
+  	{
+  	  HAL_GPIO_WritePin(GPIOC, LD4_Pin, GPIO_PIN_RESET);
+  	}
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
   }
-  /* USER CODE END 3 */
-
+    /* USER CODE END 3 */
 }
 
 /** System Clock Configuration

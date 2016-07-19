@@ -68,12 +68,6 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /* USER CODE BEGIN 1 */
-extern TIM_HandleTypeDef htim3;
 
-//ISR for Timer-3
-void TIM3_IRQHandler(void)                    //refer startup_stm32l100xc.s for list of pre-defined interrupt handlers
-{
-  HAL_TIM_IRQHandler(&htim3);                 //interrupt routine for timers
-}
 /* USER CODE END 1 */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
