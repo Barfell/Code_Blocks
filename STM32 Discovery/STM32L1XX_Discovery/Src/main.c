@@ -95,22 +95,29 @@ int main(void)
 //  MX_RTC_Init();
 //  MX_SPI2_Init();
 //  MX_SPI3_Init();
-//  MX_TIM3_Init();
+  MX_TIM3_Init();
 //  MX_USART1_UART_Init();
 //  MX_USART2_UART_Init();
 //  MX_TIM10_Init();
 
   /* USER CODE BEGIN 2 */
   HAL_GPIO_WritePin(GPIOC, LD3_Pin, GPIO_PIN_SET);             //system ready LED
+  HAL_TIM_Base_Start_IT(&htim3);            				   //start timer 3 with interrupt
+
+  //refer relevant CMSIS device file in Drivers folder to know which IRQn (interrupt number) to use
+  HAL_NVIC_SetPriority(TIM3_IRQn, 1, 0);   					   //set timer 3 interrupt preempt priority 1
+  HAL_NVIC_EnableIRQ(TIM3_IRQn);      						   //enable timer 3 interrupt
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	HAL_GPIO_TogglePin(GPIOC, LD3_Pin);
+	delay_ms(250);
     /* USER CODE END WHILE */
-  	HAL_GPIO_TogglePin(GPIOC, LD4_Pin);          //toggle LD4
-  	delay_ms(500);                              //wait a bit
+
     /* USER CODE BEGIN 3 */
 
   }
@@ -183,6 +190,13 @@ void delay_ms(unsigned long x)
 	   asm("NOP");
 	}
   }
+}
+
+//timer period elapsed callback (called by HAL_TIM_IRQHandler())
+//add user code for interrupt routine here
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  HAL_GPIO_TogglePin(GPIOC, LD4_Pin);       //toggle LD4
 }
 /* USER CODE END 4 */
 
