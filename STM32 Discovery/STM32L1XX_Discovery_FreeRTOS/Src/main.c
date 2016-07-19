@@ -43,7 +43,7 @@
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-
+TaskHandle_t T1, T2;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -57,14 +57,32 @@ void MX_FREERTOS_Init(void);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
+//Task T1
+void taskLED1(void *pvParameters)
+{
+  while(1)
+  {
+	HAL_GPIO_TogglePin(GPIOC, LD4_Pin);       //toggle LD4
+	vTaskDelay(500);
+  }
+}
 
+//Task T2
+void taskLED2(void *pvParameters)
+{
+  while(1)
+  {
+	HAL_GPIO_TogglePin(GPIOC, LD3_Pin);       //toggle LD3
+	vTaskDelay(250);
+  }
+}
 /* USER CODE END 0 */
 
 int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+  BaseType_t retVal;
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -79,7 +97,9 @@ int main(void)
   MX_GPIO_Init();
 
   /* USER CODE BEGIN 2 */
-
+  //create tasks
+  retVal=xTaskCreate(taskLED1, "taskLED1", 128, NULL, configMAX_PRIORITIES-1, &T1);       //higher priority task
+  retVal=xTaskCreate(taskLED2, "taskLED2", 128, NULL, configMAX_PRIORITIES-2, &T2);       //lower priority task
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
