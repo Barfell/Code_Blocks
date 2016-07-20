@@ -45,7 +45,8 @@
 #include "gpio.h"
 
 /* USER CODE BEGIN Includes */
-
+#include<stdio.h>
+#include<stdlib.h>
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -65,15 +66,14 @@ void delay_ms(unsigned long x);               //delay milliseconds function
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
-volatile int flag=0;
-uint8_t serial_data[3]={0};                     //data buffer
+
 /* USER CODE END 0 */
 
 int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+  initialise_monitor_handles();               //to enable debug printf()
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -97,16 +97,13 @@ int main(void)
 //  MX_SPI2_Init();
 //  MX_SPI3_Init();
 //  MX_TIM3_Init();
-  MX_USART1_UART_Init();
+//  MX_USART1_UART_Init();
 //  MX_USART2_UART_Init();
 //  MX_TIM10_Init();
 
   /* USER CODE BEGIN 2 */
   HAL_GPIO_WritePin(GPIOC, LD3_Pin, GPIO_PIN_SET);             //system ready LED
-
-  //refer relevant CMSIS device file in Drivers folder to know which IRQn (interrupt number) to use
-  HAL_NVIC_SetPriority(USART1_IRQn, 1, 0);   				   //set USART-1 interrupt preempt priority 1
-  HAL_NVIC_EnableIRQ(USART1_IRQn);      				       //enable USART-1 interrupt
+  printf("LED Blink Program\n");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -114,12 +111,13 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-  	HAL_UART_Receive_IT(&huart1, serial_data, 3);              //receive data
-  	flag=1;
-  	while(flag==1);
+  	HAL_GPIO_TogglePin(GPIOC, LD4_Pin);          //toggle LD4
+  	delay_ms(500);                              //wait a bit
     /* USER CODE BEGIN 3 */
+
   }
   /* USER CODE END 3 */
+
 }
 
 /** System Clock Configuration
@@ -184,32 +182,9 @@ void delay_ms(unsigned long x)
   {
 	for(j=0; j<2500; j++)
 	{
-	  asm("NOP");
+	   asm("NOP");
 	}
   }
-}
-
-//callback functions for UART (called by HAL_UART_IRQHandler())
-//add user code for interrupt routine here
-void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
-{
-
-}
-
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
-{
-  //indicate execution of interrupt
-  HAL_GPIO_TogglePin(GPIOC, LD4_Pin);
-  delay_ms(100);
-  HAL_GPIO_TogglePin(GPIOC, LD4_Pin);
-
-  HAL_UART_Transmit(&huart1, serial_data, 3, HAL_MAX_DELAY);             //transmit data
-  flag=0;
-}
-
-void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
-{
-
 }
 /* USER CODE END 4 */
 

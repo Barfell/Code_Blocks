@@ -45,7 +45,8 @@
 #include "gpio.h"
 
 /* USER CODE BEGIN Includes */
-
+#include<stdio.h>
+#include<stdlib.h>
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -72,7 +73,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+  initialise_monitor_handles();               //to enable debug printf()
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -102,6 +103,7 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
   HAL_GPIO_WritePin(GPIOC, LD3_Pin, GPIO_PIN_SET);             //system ready LED
+  printf("LED Blink Program\n");
   /* USER CODE END 2 */
 
   /* Infinite loop */

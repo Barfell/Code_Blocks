@@ -69,12 +69,5 @@ void SysTick_Handler(void)
 
 /* USER CODE BEGIN 1 */
 
-//ISR for USART-1
-extern UART_HandleTypeDef huart1;
-
-void USART1_IRQHandler(void)             //refer startup_stm32l100xc.s for list of pre-defined interrupt handlers
-{
-  HAL_UART_IRQHandler(&huart1);          //interrupt routine for UART
-}
 /* USER CODE END 1 */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
