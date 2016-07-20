@@ -12,7 +12,7 @@ monitor arm semihosting enable
 
 -specs=nosys.specs -specs=nano.specs -specs=rdimon.specs -lc -lrdimon
 
-3) And finally in main.c, you have to call the initialize_monitor_handles() at the beginning of main() as shown:
+3) And finally in main.c, you have to call initialize_monitor_handles() at the beginning of main() as shown:
 
 
 #include <stdio.h>
