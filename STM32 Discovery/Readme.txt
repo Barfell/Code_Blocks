@@ -2,24 +2,24 @@ To run examples, just copy paste files in Src folder.
 
 Steps to enable debug print() using OpenOCD:
 
-1) In Debug configuration > Startup Tab , add this :
+1) In Debug configuration > Startup tab , add:
 
 
 monitor arm semihosting enable
 
-2) And in Project, Properties, C/C++ Build, Settings, MCU GCC Linker, Miscellaneous, Linker flags, add this: 
+2) And in Project > Properties > C/C++ Build > Settings > MCU GCC Linker > Miscellaneous > Linker flags, add: 
 
 
 -specs=nosys.specs -specs=nano.specs -specs=rdimon.specs -lc -lrdimon
 
-3) And finally in your code, you have only to call the initialize_monitor_handles in the begin of the main routine:
+3) And finally in main.c, you have to call the initialize_monitor_handles() at the beginning of main() as shown:
 
 
- initialise_monitor_handles();
 #include <stdio.h>
 #include <stdlib.h>
  
-int main(void) {
+int main(void) 
+{
   initialise_monitor_handles();
  
   printf("Hello !\n");
@@ -27,7 +27,5 @@ int main(void) {
   HAL_Init();
   SystemClock_Config();
  
-  puts("Check your openocd console.\n");
-  printf("This works too\n");
-  //……………
+  printf("Check your openocd console.\n");
 }
