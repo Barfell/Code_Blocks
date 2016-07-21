@@ -58,7 +58,6 @@ void delay_ms(unsigned long x);               //delay milliseconds function
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
-volatile int flag=0;
 uint8_t serial_data[3]={0};                     //data buffer
 /* USER CODE END 0 */
 
@@ -85,6 +84,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_GPIO_WritePin(GPIOC, LD3_Pin, GPIO_PIN_SET);             //system ready LED
   printf("DMA-Based UART Communication Program\n");
+
+  HAL_UART_Receive_DMA(&huart1, serial_data, 3);              //receive data continuously in circular mode
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -92,9 +93,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    HAL_UART_Receive_DMA(&huart1, serial_data, 3);              //receive data
-    flag=1;
-    while(flag==1);
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -168,15 +167,10 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-  //indicate execution of interrupt
-  HAL_GPIO_TogglePin(GPIOC, LD4_Pin);
-  delay_ms(100);
-  HAL_GPIO_TogglePin(GPIOC, LD4_Pin);
-
   HAL_UART_Transmit(&huart1, serial_data, 3, HAL_MAX_DELAY);             //transmit data
 
-  flag=0;
-  printf("Data received. Sending stuff back...\n");
+  //printf("Data received. Sending stuff back...\n");                      //indicate execution of interrupt
+  //printf() slows down the ISR; if data is continuously streamed in without stopping, we will lose data
 }
 
 void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
