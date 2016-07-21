@@ -37,7 +37,8 @@
 #include "gpio.h"
 
 /* USER CODE BEGIN Includes */
-
+#include<stdio.h>
+#include<stdlib.h>
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -65,7 +66,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+  initialise_monitor_handles();                      //to enable debug printf()
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -83,7 +84,7 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
   HAL_GPIO_WritePin(GPIOC, LD3_Pin, GPIO_PIN_SET);             //system ready LED
-
+  printf("DMA-Based UART Communication Program\n");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -173,7 +174,9 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
   HAL_GPIO_TogglePin(GPIOC, LD4_Pin);
 
   HAL_UART_Transmit(&huart1, serial_data, 3, HAL_MAX_DELAY);             //transmit data
+
   flag=0;
+  printf("Data received. Sending stuff back...\n");
 }
 
 void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)

@@ -22,7 +22,7 @@ extern void initialise_monitor_handles(void);                 //might not be nee
 
 int main(void) 
 {
-  initialise_monitor_handles();
+  initialise_monitor_handles();                        //to enable debug printf()
  
   printf("Hello !\n");
  
