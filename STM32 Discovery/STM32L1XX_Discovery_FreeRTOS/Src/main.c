@@ -36,7 +36,8 @@
 #include "gpio.h"
 
 /* USER CODE BEGIN Includes */
-
+#include<stdio.h>
+#include<stdlib.h>
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -63,6 +64,7 @@ void taskLED1(void *pvParameters)
   while(1)
   {
 	HAL_GPIO_TogglePin(GPIOC, LD4_Pin);       //toggle LD4
+	printf("Hello from Task-1\n");
 	vTaskDelay(500);
   }
 }
@@ -73,6 +75,7 @@ void taskLED2(void *pvParameters)
   while(1)
   {
 	HAL_GPIO_TogglePin(GPIOC, LD3_Pin);       //toggle LD3
+	printf("Hello from Task-2\n");
 	vTaskDelay(250);
   }
 }
@@ -83,6 +86,7 @@ int main(void)
 
   /* USER CODE BEGIN 1 */
   BaseType_t retVal;
+  initialise_monitor_handles();                   //to enable debug printf()
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -100,6 +104,7 @@ int main(void)
   //create tasks
   retVal=xTaskCreate(taskLED1, "taskLED1", 128, NULL, configMAX_PRIORITIES-1, &T1);       //higher priority task
   retVal=xTaskCreate(taskLED2, "taskLED2", 128, NULL, configMAX_PRIORITIES-2, &T2);       //lower priority task
+  printf("FreeRTOS Program\n");
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
