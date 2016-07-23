@@ -64,6 +64,8 @@ int main(void)
 
   /* USER CODE BEGIN 1 */
   initialise_monitor_handles();                        //to enable debug printf()
+
+  GPIO_PinState value[5];                              //joystick value
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -87,10 +89,21 @@ int main(void)
   while (1)
   {
   /* USER CODE END WHILE */
-	HAL_GPIO_TogglePin(LD_G_GPIO_Port, LD_G_Pin);          //toggle LD4
-	delay_ms(500);                                        //wait a bit
-  /* USER CODE BEGIN 3 */
+	//blink LD_G
+	HAL_GPIO_TogglePin(LD_G_GPIO_Port, LD_G_Pin);
+	delay_ms(500);
 
+	//read joystick
+	printf("Joystick Status:\n");
+
+	value[0]=HAL_GPIO_ReadPin(GPIOA, JOY_UP_Pin);
+	value[1]=HAL_GPIO_ReadPin(GPIOA, JOY_LEFT_Pin);
+	value[2]=HAL_GPIO_ReadPin(GPIOA, JOY_CENTER_Pin);
+	value[3]=HAL_GPIO_ReadPin(GPIOA, JOY_RIGHT_Pin);
+	value[4]=HAL_GPIO_ReadPin(GPIOA, JOY_DOWN_Pin);
+
+	printf("  %d\n%d %d %d\n  %d\n\n", value[0], value[1], value[2], value[3], value[4]);
+  /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 
