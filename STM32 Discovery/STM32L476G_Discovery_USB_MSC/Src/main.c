@@ -37,7 +37,8 @@
 #include "gpio.h"
 
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
+#include <stdlib.h>
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -64,7 +65,9 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
+  initialise_monitor_handles();                        //to enable debug printf()
 
+  QSPI_Info flashInfo;                                 //to get info about the SPI NOR flash chip
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -81,7 +84,16 @@ int main(void)
   MX_USB_DEVICE_Init();
 
   /* USER CODE BEGIN 2 */
+  printf("USB MSC Program\n");
+  printf("Using SPI NOR Flash as USB Removable Storage\n\n");
 
+  //display info about the SPI NOR flash chip
+  BSP_QSPI_GetInfo(&flashInfo);
+  printf("Flash Chip Info: \n");
+  printf("Chip Vendor: Micron Technology Corp.\n");
+  printf("Chip Model: N25Q128A SPI NOR Flash\n");
+  printf("Capacity (bytes): %d\n", flashInfo.FlashSize);
+  printf("FAT Cluster Size (bytes): %d\n", flashInfo.EraseSectorSize);
   /* USER CODE END 2 */
 
   /* Infinite loop */
