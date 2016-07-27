@@ -1,0 +1,1 @@
+Access the on-board 16MB SPI NOR Flash through USB.
