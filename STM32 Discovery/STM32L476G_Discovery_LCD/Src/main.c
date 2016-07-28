@@ -53,7 +53,7 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
-
+void delay_ms(unsigned long x);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
@@ -81,15 +81,24 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
   printf("LCD Program\n");
-
-  LCD_GLASS_Clear();
-  LCD_GLASS_DisplayString("HELLO");
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	//display stuff on the LCD
+	LCD_GLASS_Clear();
+	LCD_GLASS_DisplayString("HELLO");
+	delay_ms(1000);
+
+	LCD_GLASS_Clear();
+	LCD_GLASS_DisplayString("12345");
+	delay_ms(1000);
+
+	LCD_GLASS_Clear();
+	LCD_GLASS_DisplayString("*-+ /");
+	delay_ms(1000);
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
@@ -153,7 +162,19 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+//delay milliseconds function
+void delay_ms(unsigned long x)
+{
+  unsigned long i;
+  unsigned int j;
+  for(i=0; i<x; i++)
+  {
+	for(j=0; j<8000; j++)
+	{
+	   asm("NOP");
+	}
+  }
+}
 /* USER CODE END 4 */
 
 /**
