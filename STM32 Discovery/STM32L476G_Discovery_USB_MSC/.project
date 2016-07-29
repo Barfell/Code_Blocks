@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>STM32L476G_Discovery_USB_MSC</name>
-	<comment></comment>
+	<comment />
 	<projects>
 	</projects>
 	<buildSpec>
@@ -27,7 +27,7 @@
 	<filteredResources>
 		<filter>
 			<id>1469744741356</id>
-			<name></name>
+			<name />
 			<type>6</type>
 			<matcher>
 				<id>org.eclipse.ui.ide.multiFilter</id>
@@ -36,7 +36,7 @@
 		</filter>
 		<filter>
 			<id>1469744741377</id>
-			<name></name>
+			<name />
 			<type>6</type>
 			<matcher>
 				<id>org.eclipse.ui.ide.multiFilter</id>

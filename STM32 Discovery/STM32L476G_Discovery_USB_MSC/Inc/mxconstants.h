@@ -137,8 +137,6 @@
 #define SEG9_GPIO_Port GPIOC
 #define SEG13_Pin GPIO_PIN_8
 #define SEG13_GPIO_Port GPIOC
-#define OTG_FS_PowerSwitchOn_Pin GPIO_PIN_9
-#define OTG_FS_PowerSwitchOn_GPIO_Port GPIOC
 #define COM0_Pin GPIO_PIN_8
 #define COM0_GPIO_Port GPIOA
 #define COM1_Pin GPIO_PIN_9
