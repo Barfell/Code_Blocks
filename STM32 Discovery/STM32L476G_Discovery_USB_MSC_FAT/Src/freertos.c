@@ -126,7 +126,7 @@ void appTaskBody(void const * argument)
   MX_FATFS_Init();
 
   /* USER CODE BEGIN appTaskBody */
-    
+
   /* Wait for the qspiMutex */
   osMutexWait(qspiMutexHandle, osWaitForever);
 
@@ -156,6 +156,8 @@ void appTaskBody(void const * argument)
 
   /* Release the qspiMutex */
   osMutexRelease(qspiMutexHandle);
+
+  //printf("appTask Stack Usage (words): %d\n", (int)uxTaskGetStackHighWaterMark(NULL));               //calc. max. stack usage for the task
     
   /* Infinite loop */
   for(;;)
@@ -228,7 +230,9 @@ void usbTaskBody(void const * argument)
       
 	  /* Release the qspiMutex */
 	  osMutexRelease(qspiMutexHandle);
-	
+
+	  //printf("usbTask Stack Usage (words): %d\n", (int)uxTaskGetStackHighWaterMark(NULL));                    //calc. max. stack usage for the task
+
       HAL_GPIO_WritePin(LD_R_GPIO_Port, LD_R_Pin, GPIO_PIN_RESET);
     }
 	
