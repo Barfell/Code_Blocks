@@ -119,9 +119,6 @@ void MX_FREERTOS_Init(void) {
 /* appTaskBody function */
 void appTaskBody(void const * argument)
 {
-  /* init code for USB_DEVICE */
-  MX_USB_DEVICE_Init();
-
   /* init code for FATFS */
   MX_FATFS_Init();
 

@@ -93,7 +93,7 @@ int main(void)
   printf("Chip Vendor: Micron Technology Corp.\n");
   printf("Chip Model: N25Q128A SPI NOR Flash\n");
   printf("Capacity (bytes): %d\n", flashInfo.FlashSize);
-  printf("FAT Cluster Size (bytes): %d\n", flashInfo.EraseSectorSize);
+  printf("Sector Size (bytes): %d\n", flashInfo.EraseSectorSize);
   /* USER CODE END 2 */
 
   /* Infinite loop */
