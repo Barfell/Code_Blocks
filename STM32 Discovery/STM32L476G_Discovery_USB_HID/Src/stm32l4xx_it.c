@@ -73,8 +73,8 @@ void SysTick_Handler(void)
     /* check Joystick state every polling interval (10ms); standard for mice */
     if (counter++ == USBD_HID_GetPollingInterval(&hUsbDeviceFS))
     {
-      /* send data though IN endpoint*/
-      if((HID_Buffer[1] != 0) || (HID_Buffer[2] != 0))
+      /* send data though IN endpoint if joystick input was received */
+      if((HID_Buffer[0] != 0) || (HID_Buffer[1] != 0) || (HID_Buffer[2] != 0))
       {
         USBD_HID_SendReport(&hUsbDeviceFS, HID_Buffer, 4);
       }
@@ -119,28 +119,35 @@ static void GetPointerData(uint8_t *pbuf)
   {
     case JOY_LEFT_Pin:
       x -= CURSOR_STEP;
+      pbuf[0] = 0;
       break;
 
     case JOY_RIGHT_Pin:
       x += CURSOR_STEP;
+      pbuf[0] = 0;
       break;
 
     case JOY_UP_Pin:
       y -= CURSOR_STEP;
+      pbuf[0] = 0;
       break;
 
     case JOY_DOWN_Pin:
       y += CURSOR_STEP;
+      pbuf[0] = 0;
+      break;
+
+    case JOY_CENTER_Pin:
+      pbuf[0] = 1;           //1=left-click, 2=right-click, 3=middle button
       break;
 
     default:
 	  break;
   }
 
-  pbuf[0] = 0;
   pbuf[1] = x;
   pbuf[2] = y;
-  pbuf[3] = 0;
+  pbuf[3] = 0;               //used for wheel movement
 }
 
 /**
