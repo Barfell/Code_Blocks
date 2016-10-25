@@ -1,4 +1,4 @@
-To run examples, just copy paste files in Src folder.
+Example source code for various STM32 MCUs.
 
 Steps to enable debug print() using OpenOCD:
 

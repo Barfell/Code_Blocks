@@ -1,3 +1,3 @@
-1) USB Mouse using joystick as input.
+Example source code for STM32L476G (Discovery) for creating a USB HID device (a mouse in this case).
 
-2) Cursor can only be moved across the screen. Clicks have not been implemented yet.
+On-board joystick used as input.

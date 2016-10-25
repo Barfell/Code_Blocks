@@ -1,0 +1,1 @@
+Example source code for STM32L100 (Discovery) using UART for streaming data via DMA.

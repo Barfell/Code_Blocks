@@ -1,0 +1,1 @@
+Example source code for STM32L476G (Discovery) for on-board LED blinking.

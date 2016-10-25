@@ -1,3 +1,5 @@
+Example source code for STM32L476G (Discovery) for audio output via SAI.
+
 1) Access the on-board 16MB SPI NOR Flash through USB. The memory can be accessed internally by the MCU as well by mounting the FAT filesystem.
 
 2) The MCU plays .wav audio files placed in the memory through an SAI interface to an audio DAC.

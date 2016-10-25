@@ -1,2 +1,1 @@
-# MATLAB
 Example source code for image processing and external hardware interfacing using MATLAB.
