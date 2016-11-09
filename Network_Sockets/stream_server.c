@@ -109,10 +109,13 @@ int main(int argc, char *argv[])
     }
 
     //reap all zombie processes
+    //sigaction() waits for a software interrupt (signal) which is triggered when a child process exits in this case
+    //interrupt routine=sigchld_handler; it reaps the now zombie child process
     sa.sa_handler = sigchld_handler; 
     sigemptyset(&sa.sa_mask);
     sa.sa_flags = SA_RESTART;
-    if (sigaction(SIGCHLD, &sa, NULL) == -1) 
+
+    if (sigaction(SIGCHLD, &sa, NULL) == -1)        
     {
         printf("Server: sigaction() failed");
         exit(1);
