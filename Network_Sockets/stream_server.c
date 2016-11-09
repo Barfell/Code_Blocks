@@ -19,6 +19,7 @@
 
 #define BACKLOG 10     //how many pending connections queue will hold
 
+//reap zombie processes
 void sigchld_handler(int s)
 {
     //waitpid() might overwrite errno, so we save and restore it:
@@ -107,7 +108,7 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    //reap all dead processes
+    //reap all zombie processes
     sa.sa_handler = sigchld_handler; 
     sigemptyset(&sa.sa_mask);
     sa.sa_flags = SA_RESTART;
