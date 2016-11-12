@@ -78,6 +78,7 @@ int main(int argc, char *argv[])
         //remove any leftover sockets still present in the kernel for the given port
         if (setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(yes)) == -1) 
 	{
+            close(sockfd);
             printf("Server: Address already in use");
             exit(1);
         }
